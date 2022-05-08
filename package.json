@@ -1,0 +1,15 @@
+{
+  "name": "Greybeard-entertainment",
+  "version": "1.0.0",
+  "description": "Greybearded thinking",
+  "main": "index.js",
+  "license": "CC BY-SA 4.0",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "devDependencies": {
+    "vitepress": "^0.22.3"
+  }
+}

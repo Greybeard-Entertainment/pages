@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Linux Biolinum";
+    src: url(fonts/LinBiolinum_R.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Linux Libertine Mono";
+    src: url(fonts/LinLibertine_M.woff) format("woff");
+}
+
+:root {    
+    /**
+     * Colors
+     * --------------------------------------------------------------------- */
+  
+    --c-white: #3d3d3d;
+    --c-white-dark: #020202;
+    --c-black: #292929;
+  
+    --c-divider-light: #292929; /* rgba(60, 60, 67, 0.12) */
+    --c-divider-dark: rgba(84, 84, 88, 0.48);
+  
+    --c-text-light-1: #eee;
+    --c-text-light-2: #eee;
+    --c-text-light-3: #eee;
+  
+    --c-brand: #e70000;
+    --c-brand-light: #e70000; /* #cd0000 */
+
+  /**
+   * Typography
+   * --------------------------------------------------------------------- */
+
+   --font-family-base: 'Linux Biolinum', sans-serif;
+   --font-family-mono: 'Linux Libertine Mono', monospace;
+}
