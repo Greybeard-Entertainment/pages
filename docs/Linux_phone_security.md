@@ -1,7 +1,7 @@
 ---
 title: Linux phone (in)security
 layout: post
-lang: en-US
+lang: en-GB
 sidebarDepth: 2
 ---
 
