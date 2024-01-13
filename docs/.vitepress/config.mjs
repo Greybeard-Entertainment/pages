@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-	title: "Aleksandr Petrosyan",
+	title: "Greybeard Consulting",
 	lang: "en-GB",
 	description: "A home to Philosophy, Science, Music and Software",
 	themeConfig: {

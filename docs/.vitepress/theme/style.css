@@ -51,6 +51,16 @@
 }
 
 @font-face {
+	font-family: "Linux Biolinum";
+	src: url(fonts/LinBiolinum_R.woff) format("woff");
+}
+
+@font-face {
+	font-family: "Linux Libertine Mono";
+	src: url(fonts/LinLibertine_M.woff) format("woff");
+}
+
+@font-face {
 	font-family: ddin;
 	size-adjust: 120%;
 	src: url("Fonts/d-din/D-DINCondensed.otf")
