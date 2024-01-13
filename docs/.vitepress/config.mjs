@@ -1,4 +1,6 @@
 import { defineConfig } from 'vitepress'
+import markdownItFoo from 'markdown-it-footnote'
+import markdownItAbbr from 'markdown-it-abbr'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -11,6 +13,12 @@ export default defineConfig({
 			{ icon: 'github', link: 'https://github.com/Greybeard-Entertainment/' },
 			{ icon: 'discord', link: 'https://discord.gg/XVVVC2VS' },
 		]
+	},
+	markdown: {
+		math: true,
+		config: (md) => {
+			md.use(markdownItFoo)
+		}
 	}
 })
 

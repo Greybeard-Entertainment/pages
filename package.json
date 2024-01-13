@@ -10,6 +10,9 @@
     "docs:serve": "vitepress serve docs"
   },
   "devDependencies": {
+    "markdown-it": "^14.0.0",
+    "markdown-it-abbr": "^2.0.0",
+    "markdown-it-footnote": "^4.0.0",
     "vitepress": "^0.22.3"
   }
 }
