@@ -43,54 +43,15 @@
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
-:root {
-	/* --vp-font-family-base: "PlexSerifBold"; */
-	/* --vp-font-family-base: PlexLight; */
-	--vp-font-family-base: ddin;
-	--vp-font-family-mono: "VicMono";
-}
-
-@font-face {
-	font-family: "Linux Biolinum";
-	src: url(fonts/LinBiolinum_R.woff) format("woff");
-}
-
-@font-face {
-	font-family: "Linux Libertine Mono";
-	src: url(fonts/LinLibertine_M.woff) format("woff");
-}
-
-@font-face {
-	font-family: ddin;
-	size-adjust: 120%;
-	src: url("Fonts/d-din/D-DINCondensed.otf")
-}
-
-@font-face {
-	font-family: PlexSerifBold;
-	src: url("Fonts/IBM_Plex_Serif/IBMPlexSerif-Bold.ttf");
-}
-
-@font-face {
-	font-family: PlexLight;
-	size-adjust: 120%;
-	src: url("Fonts/IBM_Plex_Serif/IBMPlexSerif-ExtraLight.ttf");
-}
-
-@font-face {
-	font-family: VicMono;
-	src: url("Fonts/Victor_Mono/VictorMono.ttf");
-}
-
  :root {
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
   --vp-c-default-3: var(--vp-c-gray-3);
   --vp-c-default-soft: var(--vp-c-gray-soft);
 
-  --vp-c-brand-1: var(--vp-c-green-1);
-  --vp-c-brand-2: var(--vp-c-green-2);
-  --vp-c-brand-3: var(--vp-c-green-3);
+  --vp-c-brand-1: var(--vp-c-indigo-1);
+  --vp-c-brand-2: var(--vp-c-indigo-2);
+  --vp-c-brand-3: var(--vp-c-indigo-3);
   --vp-c-brand-soft: var(--vp-c-indigo-soft);
 
   --vp-c-tip-1: var(--vp-c-brand-1);
@@ -113,13 +74,6 @@
  * Component: Button
  * -------------------------------------------------------------------------- */
 
-h1,h2,h3,h4 {
-	font-family: "PlexLight";
-	background: -webkit-linear-gradient(120deg, #fff100, #00cfff 95%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
 :root {
   --vp-button-brand-border: transparent;
   --vp-button-brand-text: var(--vp-c-white);
@@ -140,8 +94,8 @@ h1,h2,h3,h4 {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
-      #00afff,
-	  #aaa100
+    #bd34fe 30%,
+    #41d1ff
   );
 
   --vp-home-hero-image-background-image: linear-gradient(
