@@ -1,11 +1,4 @@
----
-title: Linux phone (in)security
-layout: post
-lang: en-GB
-sidebarDepth: 2
----
-
-# {{ $frontmatter.title }}
+# On Linux Phone security
 
 Recently, my acquaintances sent me an article called "Linux Phones". Its
 author, Madaidan, claims that Linux phones are a "a major degradation from

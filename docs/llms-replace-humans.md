@@ -1,3 +1,6 @@
+---
+outline: [2, 4]
+---
 # Large language models won’t replace the programmers tomorrow
 
 [![](https://upload.wikimedia.org/wikipedia/commons/b/b8/IBM_150_Extra_Engineers_1951.jpg)](https://commons.wikimedia.org/wiki/File:IBM_150_Extra_Engineers_1951.jpg)
@@ -10,7 +13,7 @@ Odds are, you're fuming with anger having clicked on an obvious clickbait, tryin
 
 LLMs generate numbers. Numbers can be text tokens, can be pixels, sound, 3d models, or they could be machine instructions including code and outputs of some compilers and systems like verilog. The efficacy of LLMs is predicated on the tooling. And, you see, programming is not just about writing code and knowing the proper names of certain things. Otherwise, compilers would have replaced programmers long ago. Oh no, programming is a language skill, coupled with some real-world experience, that would allow a programmer to spot a mistake in the technical specifications of the code that they are asked to write; more often than not the program does exactly what you asked it to do, but just like a fickle genie, it doesn't correct for "common-sense".
 
-## Full self-driving still needs a driver
+### Full self-driving still needs a driver
 
 The guiding principle of transformers and transformer-like models is next token prediction. Imagine, you remember a lot and speak long sentences without thinking much. That’ll be rather similar to the results of the process that most LLMs utilise to generate the "magical" results. These methods can be weaponised to search for text, or they could be used for word substitution.
 
@@ -24,7 +27,7 @@ Rather than regurgitating our earlier discussion in the old [CyberLounge](https:
 
 So without further ado.
 
-## Next token prediction is not thinking
+### Next token prediction is not thinking
 
 To find out why, let’s get meta: think about how we think. "I’d put this word here, because it looks relatively appropriate"? Maybe it's something I do occasionally when writing documentation in a foreign language, but not routinely. Our way of solving problems is spread over several distinct layers of abstraction, starting with concepts and ending in language. We descend the layers of abstraction from the conceptual stage, where we have plans and actions, concepts and inferences, we have what I would argue, thought in its purest and most abstract form. At this stage we can think in terms of vague pictures, or formulae, or even nothing explicit, nothing we can even verbalise. Case in point, Feynman was thinking with pictures, and his diagrams were helpful, but that abstraction was not a pre-existing statistical result that was extrapolated, but rather an emergent consequence of familiarity with Wick's theorem. LLMs have no room for such an abstract process, or at least, it's hard to tell. True, they _could_ have this, but that is an extraordinary claim, backed by (at best) lack of any evidence to the contrary.
 
@@ -38,13 +41,13 @@ Let's go further. A human can modify the page further, incrementally change the 
 
 It gets sillier! Often enough, LLMs simply stop writing the text and you need to make them continue from that point on manually! I haven't yet seen a cover-all method that allows LLMs to automatically start and stop, GPT-4 included. Maybe GPT-5 will do that? ChatGPT in particular sometimes breaks and writes the code after the highlight, so even if one had direct API access, weaponising this to replace an engineer would be a monumental task, defeating the original intention.
 
-## Some background on Neuroscience
+### Some background on Neuroscience
 
 Our brains **remember related information**, perform action selection[^action_selection] based on the outside context provided by our senses, while **filtering inappropriate actions out**. That’s quite different in comparison to the LLMs, which, in turn, [generate the most probable next token](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/). Besides, the modern LLMs are limited by the data provided in training dataset: they don’t retrieve new information[^1]. We're still stuck with the machine learning methods that can't learn real-time, requiring the immense arrays of hardware to do the training. The popular ChatGPT failed to cobble up a word of a given length out of the letters I've picked, which Python (that is considered to be slow by many) does in less than a second on my cheap laptop. Several times in a row, because I wanted to be fair towards it and repeated my test. It’s not a description for super (or human-level) intelligence, really.
 
 Sure, you could make the argument that some vague future models might approach the problem better. I would revisit this discussion at that time, because right now, we are projecting superhuman intelligence onto a stochastic parrot. Plus, given the no-free-lunch theorem, if there ever will be an artificial general intelligence, it will **have** to be only partially statistical in nature. Plus, there's a good chance that by the time we have something like AGI, we will have deepened our knowledge and there's still something somewhere that the artificial intelligence does worse than a human (for one, our brains have exceptional power efficiency).
 
-## Ground for improvement
+### Ground for improvement
 
 Now, let's talk about a thing to improve. LLMs need to be able to assess what they write. If an LLM writes five or seven-letter words when it’s being requested to write six-letter words, it lacks an ability for self-assesment. If it can’t plan to read code’s files and pick the one needing change, it lacks planning. Planning does not require interaction with third-party systems, but that’ll help. And yes, since your LLM isn’t typically connected to the OS in some way, it won’t interact with the project files or create a project for you. So no, LLMs won’t replace the human programmer, not yet. They would needs more parts attached. It's not all doom and gloom, many are thinking about LLMs lacking in capabilities nowadays. There’s the project [Parsel project](https://github.com/ezelikman/parsel) that partially addresses this problem. It is described as:
 
@@ -66,7 +69,7 @@ Everyone is talking about ChatGPT, while the same company has GPT-instruct, that
 
 It is both amusing and bemusing to think that some people even consider replacing any part of their software engineering teams with "A.""I.". You see, if we approach this in the straightforward way, the very people who work with ML models should be replaced through the sheer amount of data available on ML code. But does the code itself represent the whole process here? Given how much is hidden in the dataset and the model configuration, I highly doubt it. The code is not guaranteed to be straightforward and have a good architecture, it is not even guaranteed to make much sense at the first glance, yet there is a place and time for "scientific style of programming", which we often see in ML. But let's not stop here and pick something much easier. Historically, code that writes code was called different names, for example, "symbolic regression" and "genetic programming". And heck, given how much goes into picking data and tuning the genetic programming libraties, I dream about it being automated. The code is short, usually representing some visualization and a config parser. And yet, each time there's still some small trick to the data, something to optimize. LLMs won't infer formulas and won't configure the Cartesian Genetic Programming systems to make some DSP filter for sound or images soon. For now, they'll help generate the glue code.
 
-## The way forward
+### The way forward
 
 Finally, the scientists are tinkering with the ideas, which may put those technologies in our homes, instead of the large research labs with massive funding.
 
