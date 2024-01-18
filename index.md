@@ -12,7 +12,7 @@ hero:
   actions:
   - theme: brand
     text: Get in touch
-    link: /
+    link: /contact
   - theme: alt
     text: Read our blog
     link: /docs/
