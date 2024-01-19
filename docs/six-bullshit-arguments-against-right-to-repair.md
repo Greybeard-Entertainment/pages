@@ -1,6 +1,9 @@
 ---
 title: Six bullshit arguments against right to repair
 ---
+
+# Six bullshit arguments against right to repair
+
 ::: info
 This article was taken from the official CyberLounge Odysee.
 :::
