@@ -1,4 +1,8 @@
 import { defineConfig } from 'vitepress'
+import footnote from 'markdown-it-footnote'
+import mathjax3 from 'markdown-it-mathjax3'
+
+const customElements = ['mjx-container'];
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -29,5 +33,18 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Greybeard-Entertainment' }
     ]
-  }
+  },
+  markdown: {
+    async config(md) {
+      md.use(footnote)
+        .use(mathjax3)
+    },
+  },
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => customElements.includes(tag),
+      },
+    },
+  },
 })

@@ -204,8 +204,8 @@ AI is rarely used as anything more than a calculator in Maths. And
 even then, surprisingly, humans are more precise than machines
 about it anyway.
 
-How much do you trust your calculator when you punch in \(\sin
-	1000000\), to give you the right final digit? If the answer is *not
+How much do you trust your calculator when you punch in $\sin 1000000$,
+to give you the right final digit? If the answer is *not
 at all*, then you have a clear understanding of floating point
 arithmetic. If you said *it might give me the right answer, up to a
 precision*, you have more faith in technology, and you probably
@@ -217,15 +217,15 @@ All computers have a limit to precision. All computers are
 pre-programmed to use a specific set of precision criteria, and
 either fail completely, or produce a semi-accurate answer. Humans
 by contrast also do some critical thinking, if you ask them "what
-is \(\sin 100000\)", they'll ask about context, ballpark, and many
+is $\sin 100000$", they'll ask about context, ballpark, and many
 other things before even attempting to solve the problem. Let's
 ignore all of that and ask the direct question of evaluating the
 number. A human will approach this with all of their mathematical
-knowledge and ask for mathematical precision. \(\sin\) is a
-periodic function, but the period is irrational, in fact, \(\pi\)
+knowledge and ask for mathematical precision. $\sin$ is a
+periodic function, but the period is irrational, in fact, $\pi$
 is more than that, a transcendental number. Each time you unwind a
-period, you lose a lot of precision to truncation error. For \(\sin
-	0.1\) this is negligible, but for larger numbers, you'd need to use
+period, you lose a lot of precision to truncation error. For $\sin 0.1$
+this is negligible, but for larger numbers, you'd need to use
 excess precision to compute the number properly. Your calculator
 doesn't nearly have enough memory or registers to do that, even if
 it were scientific, the best you can do is trust the first few digits.
