@@ -5,9 +5,13 @@ title: Kill the Ads, Save the Planet
 This article is taken with permission from NukeOp (Gabriel Syme) from the official CyberLounge Odysee.
 :::
 
+# Kill the Ads, Save the Planet
+
 GNU/Alex and Gabriel Syme
 *Cyber Lounge*
 29/07/2021
+
+![](/res/img/Chris_Abney__area_covered_with_green_leafed_plants.jpg)
 
 You went down the internet privacy rabbit hole. You've got [uBlock](https://github.com/gorhill/uBlock/), you installed [uMatrix](https://github.com/gorhill/uMatrix), you have [Privacy Badger](https://privacybadger.org/), which, though redundant, pushes you further into the safe side. You follow [Rob Braxman](https://odysee.com/@RobBraxmanTech:6) and you moved from YouTube to [Odysee](https://odysee.com).
 
@@ -29,7 +33,13 @@ Of course, one would think that visa uses a lot less energy, based on the flat a
 
 Certainly when it comes to saving energy, one must mandate that computers meet a certain level of idle power draw... as opposed to mandating that computers be turned properly off, which would actually solve the issue. You see, when you put your computer into standby it uses power. A lot of power, in fact. Computers aren't the only things that do; almost everything that isn't turned on via a physical switch is constantly drawing what's called “vampire currents”. Yes even your USB charger, and yes, even when it isn't charging anything. And if most of what it's actually doing is waiting to be woken up, shouldn't we make sure that it uses as little as possible?
 
-California thinks that way. Oh yeah, and forget about actually mandating optimised games and software, because... you know... a) it's ridiculous, b) it's as ridiculous as demanding optimised hardware, c) it would *actually* solve the problem.
+California thinks that way. Oh yeah, and forget about actually mandating optimised games and software, because... you know...
+
+a) it's ridiculous,
+
+b) it's as ridiculous as demanding optimised hardware,
+
+c) it would *actually* solve the problem.
 
 Ignore the fact that there's no way to resolder a perfectly working GPU, that has some bad memory. All the energy used to produce the mask, cut the wafer, test the chips and ship the new card to you all the way from across the world has to be re-done, because the consumer has no right to buy a small memory chip and fix it themselves. This is a problem, because it takes [a lot of energy](https://www.statista.com/statistics/1179191/taiwan-semiconductor-manufacturing-company-power-consumption-per-unit-production/) to produce every chip.
 
@@ -55,4 +65,6 @@ Advertising, no matter what other greybeards tell you, works. But it's not the k
 
 The amount of money spent on advertising is so immense, that it would have been enough to end world hunger twice over. Perhaps, if we're being hard on an emerging technology that promises safe and easy exchange of value, we should be equally hard on what burns time, money and energy and serves to annoy you.
 
-(Photo by [Chris Abney](https://unsplash.com/@chrisabney) on [Unsplash](https://unsplash.com/photos/qLW70Aoo8BE))
+::: info
+Photo by [Chris Abney](https://unsplash.com/@chrisabney) on [Unsplash](https://unsplash.com/photos/qLW70Aoo8BE))
+:::
