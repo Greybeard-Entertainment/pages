@@ -15,8 +15,13 @@ export default defineConfig({
       {
         text: 'Blog',
         items: [
+                  // Greybeard articles
 		  { text: "On perceived insecurity of Linux Phones", link: "/docs/linux-phone-security" },
-		  { text: "LLMs won't replace you", link: "/docs/llms-replace-humans" }
+		  { text: "LLMs won't replace you", link: "/docs/llms-replace-humans" },
+                  // Cyber Lounge articles
+		  { text: "Cyber Lounge: Kill the Ads, Save the Planet", link: "/docs/kill-the-ads-save-the-planet" },
+		  { text: "Cyber Lounge: Six bullshit arguments against right to repair", link: "/docs/six-bullshit-arguments-against-right-to-repair" },
+		  { text: "Cyber Lounge: Will \"A\" \"\"\"I\"\"\" Ever Completely Replace Humans", link: "/docs/will-ai-ever-replace-human-programmers" },
         ]
       }
     ],
