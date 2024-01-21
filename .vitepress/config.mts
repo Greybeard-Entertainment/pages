@@ -22,6 +22,7 @@ export default defineConfig({
                   // Greybeard articles
 		  { text: "On perceived insecurity of Linux Phones", link: "/docs/linux-phone-security" },
 		  { text: "LLMs won't replace you", link: "/docs/llms-replace-humans" },
+          { text: "The driver shenanigans could have been an email", link: "/docs/the-driver-shenanigans-could-have-been-an-email" },
                   // Cyber Lounge articles
 		  { text: "Cyber Lounge: Kill the Ads, Save the Planet", link: "/docs/kill-the-ads-save-the-planet" },
 		  { text: "Cyber Lounge: Six bullshit arguments against right to repair", link: "/docs/six-bullshit-arguments-against-right-to-repair" },
