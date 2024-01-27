@@ -1028,7 +1028,6 @@ narrow cases.
 
 #+begin_quote
 A cornered animal is the most fierce.
-
 #+end_quote
 
 If you leave the defendant in a position in which they have to concede
@@ -1039,16 +1038,8 @@ an escape hatch.
 
 #+begin_quote
 The best way to defeat an argument is to defend it badly
-
-#+end_quote
-
-#+begin_quote
-
-#+begin_quote
+---
 Neitzsche
-
-#+end_quote
-
 #+end_quote
 
 Often, the smartest thing you can do is shut up. The second smartest
@@ -1060,7 +1051,6 @@ compare it to other operating systems that cannot match it.
 
 #+begin_quote
 Truth is the ultimate goal of the argument
-
 #+end_quote
 
 Your motivation should be to uncover the truth and dispel
@@ -1070,7 +1060,6 @@ your thoughts are content. Be mindful of that.
 
 #+begin_quote
 and so on
-
 #+end_quote
 
 *AND SO WHAT?!* If you had provided verifiable irrefutable arguments to
