@@ -1,6 +1,9 @@
-*** [[./linux-phone-security][Linux phone (in)security]]
-*** [[./llms-replace-humans][LLMs won't replace humans tomorrow]]
-*** [[./the-driver-shenanigans-could-have-been-an-email][The driver shenanigans could have been an email]]
-*** Cyber Lounge: [[./kill-the-ads-save-the-planet.md][Kill the Ads, Save the Planet]]
-*** Cyber Lounge: [[./six-bullshit-arguments-against-right-to-repair.md][Six bullshit arguments against right to repair]]
-*** Cyber Lounge: [[./will-ai-ever-replace-human-programmers.md][Will "A" """I""" Ever Completely Replace Humans]]
+** January 2024
+- [[./linux-phone-security][Linux phone (in)security]]
+- [[./llms-replace-humans][LLMs won't replace humans tomorrow]]
+- [[./the-driver-shenanigans-could-have-been-an-email][The driver shenanigans could have been an email]]
+
+** CyberLoung archive  
+- Cyber Lounge: [[./kill-the-ads-save-the-planet.md][Kill the Ads, Save the Planet]]
+- Cyber Lounge: [[./six-bullshit-arguments-against-right-to-repair.md][Six bullshit arguments against right to repair]]
+- Cyber Lounge: [[./will-ai-ever-replace-human-programmers.md][Will "A" """I""" Ever Completely Replace Humans]]
