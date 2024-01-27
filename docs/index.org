@@ -1,9 +1,16 @@
+#+TITLE: Greybeard Entertainment Blog
+#+AUTHOR: Aleksandr Petrosyan and Viktor Gridnevsky
+#+DATE: 27.01.2024
+#+OPTIONS: toc:nil
+#+LANGUAGE: en_GB
+
+
 ** January 2024
 - [[./linux-phone-security.org][Linux phone (in)security]]
 - [[./llms-replace-humans.org][LLMs won't replace humans tomorrow]]
 - [[./the-driver-shenanigans-could-have-been-an-email.org][The driver shenanigans could have been an email]]
 
-** CyberLoung archive
+** CyberLounge
 - Cyber Lounge: [[./kill-the-ads-save-the-planet.org][Kill the Ads, Save the Planet]]
 - Cyber Lounge: [[./six-bullshit-arguments-against-right-to-repair.org][Six bullshit arguments against right to repair]]
 - Cyber Lounge: [[./will-ai-ever-replace-human-programmers.org][Will "A" """I""" Ever Completely Replace Humans]]
