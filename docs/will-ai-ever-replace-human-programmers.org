@@ -1,4 +1,7 @@
 #+TITLE: Will "A" """I""" Ever Completely Replace Humans
+#+AUTHOR: Aleksandr Petrosyan and Viktor Gridnevsky
+#+DATE: 22.07.2021
+#+LANGUAGE: en_GB
 
 info This article is taken from the Odysee Cyberlounge. Given that
 the author of this article retains the complete copyright, we have

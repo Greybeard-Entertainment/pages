@@ -1,6 +1,7 @@
---------------
-
 #+TITLE: Kill the Ads, Save the Planet
+#+AUTHOR: Aleksandr Petrosyan and Gabriel Syme
+#+DATE: 29.07.2021
+#+LANGUAGE: en_GB
 
 This article is taken with permission from NukeOp (Gabriel
 Syme) from the official CyberLounge Odysee.

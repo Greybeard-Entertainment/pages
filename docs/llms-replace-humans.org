@@ -1,5 +1,7 @@
-
 #+TITLE: Large language models won't replace the programmers tomorrow
+#+AUTHOR: Aleksandr Petrosyan and Viktor Gridnevsky
+#+DATE: 03.01.2024
+#+LANGUAGE: en_GB
 
 [[https://commons.wikimedia.org/wiki/File:IBM_150_Extra_Engineers_1951.jpg][https://upload.wikimedia.org/wikipedia/commons/b/b8/IBM_150_Extra_Engineers_1951.jpg]]
 

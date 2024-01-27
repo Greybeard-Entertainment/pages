@@ -1,4 +1,7 @@
 #+TITLE: On Linux Phone security
+#+AUTHOR: Aleksandr Petrosyan and Viktor Gridnevsky and Gamercat
+#+DATE: 18.01.2022
+#+LANGUAGE: en_GB
 
 Recently, my acquaintances sent me an article called "Linux Phones". Its
 author, Madaidan, claims that Linux phones are a "a major degradation

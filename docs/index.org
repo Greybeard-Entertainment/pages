@@ -1,8 +1,8 @@
 #+TITLE: Greybeard Entertainment Blog
 #+AUTHOR: Aleksandr Petrosyan and Viktor Gridnevsky
 #+DATE: 27.01.2024
-#+OPTIONS: toc:nil
 #+LANGUAGE: en_GB
+#+OPTIONS: toc:nil
 
 
 ** January 2024
