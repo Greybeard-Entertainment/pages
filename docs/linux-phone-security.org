@@ -1,7 +1,5 @@
-* On Linux Phone security
-:PROPERTIES:
-:CUSTOM_ID: on-linux-phone-security
-:END:
+#+TITLE: On Linux Phone security
+
 Recently, my acquaintances sent me an article called "Linux Phones". Its
 author, Madaidan, claims that Linux phones are a "a major degradation
 from traditional mobile operating systems, such as Android or iOS". The
@@ -46,7 +44,7 @@ need to point out that a Cryptocurrency called
 than an actual textile factory that ran out of all dyes except red,
 specialising in flag production.
 
-** They do not have modern security features:
+* They do not have modern security features:
 :PROPERTIES:
 :CUSTOM_ID: they-do-not-have-modern-security-features
 :END:
@@ -73,7 +71,7 @@ above + containerisation), and most definitely qualify as strong
 sandboxes, in a sense in which any useful program /can/ qualify as a
 strong sandbox.
 
-*** [[https://en.wikipedia.org/wiki/Mandatory_access_control][MAC policies]]
+** [[https://en.wikipedia.org/wiki/Mandatory_access_control][MAC policies]]
 :PROPERTIES:
 :CUSTOM_ID: mac-policies
 :END:
@@ -148,7 +146,7 @@ accessibility access to any programs I suspect of spying.
 
 [[https://i.imgur.com/m8nIRgy.png]]
 
-*** Verified boot
+** Verified boot
 :PROPERTIES:
 :CUSTOM_ID: verified-boot
 :END:
@@ -207,7 +205,7 @@ don't think that "maybe deter someone who has already gained quite a lot
 of ground on my system" is not a good trade-off for "definitely make my
 choices fewer and further between."
 
-*** Physical access means all bets are off
+** Physical access means all bets are off
 :PROPERTIES:
 :CUSTOM_ID: physical-access-means-all-bets-are-off
 :END:
@@ -243,7 +241,7 @@ You'd be surprised to hear that something like TailsOS would actually
 help in this regard. If you don't keep a lot of this information
 locally, data recovery is going to be much harder.
 
-*** Strong app sandboxing
+** Strong app sandboxing
 :PROPERTIES:
 :CUSTOM_ID: strong-app-sandboxing
 :END:
@@ -289,7 +287,7 @@ updating the dynamic library is far easier than updating the entire
 bundle, and happens far more frequently than either the user or one of
 the App Stores actually updating the bundle.
 
-*** Modern exploit mitigations
+** Modern exploit mitigations
 :PROPERTIES:
 :CUSTOM_ID: oldkernels
 :END:
@@ -417,7 +415,7 @@ the fact that as far as we know, the kernel used by apple is a heavily
 modified Unix kernel, based off of BSD, which is written in... drum
 roll... memory-unsafe C.
 
-** Kill switches
+* Kill switches
 :PROPERTIES:
 :CUSTOM_ID: kill-switches
 :END:
@@ -425,7 +423,6 @@ roll... memory-unsafe C.
 #+begin_quote
 The microphone kill switch is useless since audio can still be gotten
 via the sensors (such as the gyroscope or accelerometer)
-
 #+end_quote
 
 Or you could have another microphone that's not connected to the kill
@@ -437,7 +434,6 @@ Librem 5 does have a "lockdown mode" that disables the sensors, it also
 requires flipping all of the other switches, including the network
 switches which effectively turns your device into a brick just to
 prevent audio recording.
-
 #+end_quote
 
 Wasn't the author's point earlier, that other sensors could be used to
@@ -449,7 +445,6 @@ probably without a gyroscrope.
 #+begin_quote
 To prevent cell tower triangulation, you can simply enable airplane mode
 and it is just as effective.
-
 #+end_quote
 
 Provided you know precisely what an Airplane mode does. Let me clarify.
@@ -490,7 +485,6 @@ vulnerability, but if an attacker has those capabilities already, then
 they can also simply sit and record any sensitive data and eventually
 upload it once you re-enable the hardware network kill switch, making it
 no more effective than airplane mode.
-
 #+end_quote
 
 This is the part, where I'm sure most serious people in the audience are
@@ -529,7 +523,6 @@ package manager, init system and a completely orthogonal threat vector.
 #+begin_quote
 The camera kill switch can be useful as a small usability improvement,
 but it is really no better than some tape.
-
 #+end_quote
 
 I'm guessing that the author never had to clean off tape residue off of
@@ -537,7 +530,6 @@ the camera.
 
 #+begin_quote
 Hardware kill switches are nothing but marketing frills.
-
 #+end_quote
 
 I agree, but not for any reason presented in the text. Hardware is
@@ -550,10 +542,8 @@ telling the firmware to pretend that it can't access the hardware.
 The reason why I bring this up, despite agreeing with the general
 sentiment is this: to kill an argument, you only must defend it badly.
 
-** PureOS is not particularly secure
-:PROPERTIES:
-:CUSTOM_ID: pureos-is-not-particularly-secure
-:END:
+* PureOS is not particularly secure
+
 In the sense in which it is not significantly more secure than e.g.
 Debian, I agree. In the sense that Debian isn't the most secure base I
 also agree. I'm even willing to concede, that in some ways Apple devices
@@ -696,7 +686,7 @@ stupid. We need to know that you /know what you're doing/, so type in
 idiot? No. Not inherently. Had he grown up on Linux, he wouldn't have
 made that mistake.
 
-*** Linux Libre
+** Linux Libre
 :PROPERTIES:
 :CUSTOM_ID: linux-libre
 :END:
@@ -751,7 +741,7 @@ Graphene OS, has none of the aforementioned weaknesses covered.
 Furthermore, since it relies on largely proprietary "apps", it exposes
 itself to a far broader range of attacks.
 
-*** and so on which modern Android phones already deploy.
+** and so on which modern Android phones already deploy.
 :PROPERTIES:
 :CUSTOM_ID: and-so-on-which-modern-android-phones-already-deploy.
 :END:
@@ -784,7 +774,7 @@ And this is kind of important. The only valid argument in the entire
 article had been that hardware kill switches are superfluous, every
 single argument was beside the point.
 
-** Examples
+* Examples
 :PROPERTIES:
 :CUSTOM_ID: examples
 :END:
@@ -857,7 +847,6 @@ was is a mistake. =doas= doesn't have this problem either.
 
 #+begin_quote
 Alternatively, an attacker could log keystrokes via X11:
-
 #+end_quote
 
 Guess what is being phased out in favour of Wayland? On Gnome, which is
@@ -894,7 +883,6 @@ combined with a biometric solution.
 #+begin_quote
 Those listed above are merely a few examples and do not even require
 exploiting bugs.
-
 #+end_quote
 
 They are indeed examples; they require a suspension of disbelief. It's
@@ -945,7 +933,7 @@ be based on fairly weak assumptions and malicious leaps of logic that
 give a free pass to anyone uncritically accepting even somewhat
 plausible explanations for extremely unlikely statements.
 
-** The "great" contrarian
+* The "great" contrarian
 :PROPERTIES:
 :CUSTOM_ID: the-great-contrarian
 :END:

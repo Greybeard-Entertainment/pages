@@ -1,21 +1,12 @@
---------------
+#+title: Six bullshit arguments against right to repair
+#+AUTHOR: Aleksandr Petrosyan (GNU/Alex) and Gabriel Syme (nukeop)
 
-** title: Six bullshit arguments against right to repair
-:PROPERTIES:
-:CUSTOM_ID: title-six-bullshit-arguments-against-right-to-repair
-:END:
-* Six bullshit arguments against right to repair
-:PROPERTIES:
-:CUSTOM_ID: six-bullshit-arguments-against-right-to-repair
-:END:
-::: info This article was taken from the official
-[[https://odysee.com/@CyberLounge:a][Cyber Lounge]]
-[[https://odysee.com/][Odysee]]. :::
+This article was taken from the official [[https://odysee.com/@CyberLounge:a][Cyber Lounge]] [[https://odysee.com/][Odysee]].
 
-::: info This article is a knee-jerk response to a BS listicle on the
-MakeUseOf website. :::
+This article is a knee-jerk response to a BS listicle on the
+MakeUseOf website.
 
-** User Safety
+* User Safety
 :PROPERTIES:
 :CUSTOM_ID: user-safety
 :END:
@@ -42,7 +33,7 @@ the devices were specifically designed to be less repairable*. Right to
 repair *can't* and *won't make it more dangerous*, because the design
 practices that lead to dangerous repairs would be made illegal.
 
-** Shrinking tech and Efficiency
+* Shrinking tech and Efficiency
 :PROPERTIES:
 :CUSTOM_ID: shrinking-tech-and-efficiency
 :END:
@@ -61,7 +52,7 @@ use to be profitable could become so.
 If you think that making devices more repairable can *negatively* affect
 benchmark scores, you should visit a doctor.
 
-** Competition
+* Competition
 :PROPERTIES:
 :CUSTOM_ID: competition
 :END:
@@ -82,7 +73,7 @@ hardware. If you're "selling" subscription hardware, how about we "pay"
 you with "subscription money" (i.e. you don't technically own it, it's
 more of a 0% interest loan).
 
-** Demand and supply
+* Demand and supply
 :PROPERTIES:
 :CUSTOM_ID: demand-and-supply
 :END:
@@ -105,7 +96,7 @@ the ability to repair a device would be laughable, since it'd be assumed
 that not producing a repairable device is the same shooting yourself in
 the foot.
 
-** No incentive to innovate
+* No incentive to innovate
 :PROPERTIES:
 :CUSTOM_ID: no-incentive-to-innovate
 :END:
