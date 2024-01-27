@@ -26,7 +26,9 @@
              :publishing-directory "./public"
              :publishing-function 'org-html-publish-to-html
 			 :email "ap886@cantab.ac.uk"
-			 :with-email t)))
+			 :html5-fancy t
+			 :with-email t
+			 :auto-sitemap t)))
 
 (setq org-html-validation-link nil)
 

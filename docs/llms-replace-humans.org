@@ -1,18 +1,11 @@
---------------
 
-** outline:
-:PROPERTIES:
-:CUSTOM_ID: 2,4
-:END:
-* Large language models won't replace the programmers tomorrow
-:PROPERTIES:
-:CUSTOM_ID: large-language-models-wont-replace-the-programmers-tomorrow
-:END:
+#+TITLE: Large language models won't replace the programmers tomorrow
+
 [[https://commons.wikimedia.org/wiki/File:IBM_150_Extra_Engineers_1951.jpg][https://upload.wikimedia.org/wikipedia/commons/b/b8/IBM_150_Extra_Engineers_1951.jpg]]
 
 Hi!
 
-** The fickle genie
+* The fickle genie
 :PROPERTIES:
 :CUSTOM_ID: the-fickle-genie
 :END:
@@ -36,7 +29,7 @@ technical specifications of the code that they are asked to write; more
 often than not the program does exactly what you asked it to do, but
 just like a fickle genie, it doesn't correct for "common-sense".
 
-*** Full self-driving still needs a driver
+** Full self-driving still needs a driver
 :PROPERTIES:
 :CUSTOM_ID: full-self-driving-still-needs-a-driver
 :END:
@@ -87,7 +80,7 @@ the inputs might fool you into thinking that it did.
 
 So without further ado.
 
-*** Next token prediction is not thinking
+** Next token prediction is not thinking
 :PROPERTIES:
 :CUSTOM_ID: next-token-prediction-is-not-thinking
 :END:
@@ -155,7 +148,7 @@ TIME, "[[https://time.com/6247678/openai-chatgpt-kenya-workers/][OpenAI
 Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less
 Toxic]]". Are there enough people to work on all of these tasks?
 
-** Minor complaints
+* Minor complaints
 :PROPERTIES:
 :CUSTOM_ID: minor-complaints
 :END:
@@ -167,7 +160,7 @@ sometimes breaks and writes the code after the highlight, so even if one
 had direct API access, weaponising this to replace an engineer would be
 a monumental task, defeating the original intention.
 
-*** Some background on Neuroscience
+** Some background on Neuroscience
 :PROPERTIES:
 :CUSTOM_ID: some-background-on-neuroscience
 :END:
@@ -198,7 +191,7 @@ knowledge and there's still something somewhere that the artificial
 intelligence does worse than a human (for one, our brains have
 exceptional power efficiency).
 
-*** Ground for improvement
+** Ground for improvement
 :PROPERTIES:
 :CUSTOM_ID: ground-for-improvement
 :END:
@@ -300,7 +293,7 @@ formulas and won't configure the Cartesian Genetic Programming systems
 to make some DSP filter for sound or images soon. For now, they'll help
 generate the glue code.
 
-*** The way forward
+** The way forward
 :PROPERTIES:
 :CUSTOM_ID: the-way-forward
 :END:
@@ -350,7 +343,7 @@ also allowing us to run these networks locally. MythicAI had
 tasks on a RAM chip, using its other properties. This can be an
 alternative to what Optalysis is doing with the Fourier optics.
 
-** Conclusion
+* Conclusion
 :PROPERTIES:
 :CUSTOM_ID: conclusion
 :END:

@@ -1,8 +1,5 @@
-* The driver shenanigans could have been an email
-:PROPERTIES:
-:CUSTOM_ID: the-driver-shenanigans-could-have-been-an-email
-:END:
-** In the beginning
+#+TITLE: The driver shenanigans could have been an email
+* In the beginning
 :PROPERTIES:
 :CUSTOM_ID: in-the-beginning
 :END:
@@ -52,7 +49,7 @@ unbootable mess. Sadly, the sole outcome of Linus' frustration was that
 he is regarded as "somewhat of an arsehole", despite him being very
 forthcoming, honest, and in some areas extremely self-conscious.
 
-** Linux is not the bees knees
+* Linux is not the bees knees
 :PROPERTIES:
 :CUSTOM_ID: linux-is-not-the-bees-knees
 :END:
@@ -98,7 +95,7 @@ More to the point, we don't want drivers just for Linux. I want to have
 my graphics card work on Risc-V, and some exotic operating system I
 wrote. I can't, and that's the whole point.
 
-** Erasure of ownership
+* Erasure of ownership
 :PROPERTIES:
 :CUSTOM_ID: erasure-of-ownership
 :END:
@@ -151,7 +148,7 @@ survive if the laws change, and people we sell stuff to begin to
 actually own it" can be replied with "Yes! you will die as a business.
 Go learn a useful skill, or find a business model that actually works".
 
-** The M1 paradox
+* The M1 paradox
 :PROPERTIES:
 :CUSTOM_ID: the-m1-paradox
 :END:
@@ -192,7 +189,7 @@ down. They can't lock the bootloader yet, and that's something I'm
 extremely happy about, but for how long? We need to make sure this isn't
 a temporary convenience that will go away.
 
-** A return to ownership
+* A return to ownership
 :PROPERTIES:
 :CUSTOM_ID: a-return-to-ownership
 :END:
@@ -233,7 +230,7 @@ times, make the kernel more flexible and don't worry much about the
 other aspects. A lot of industries and a lot of complexity simply
 vanishes.
 
-** Linux the kernel is bad news
+* Linux the kernel is bad news
 :PROPERTIES:
 :CUSTOM_ID: linux-the-kernel-is-bad-news
 :END:
@@ -261,7 +258,7 @@ the banks and transport system maintainers hard enough, we can even have
 NFC payments for banks and transport working on the systems we, as
 consumers, have control over.
 
-** Case study: A[DATA EXPUNGED] mouse
+* Case study: A[DATA EXPUNGED] mouse
 :PROPERTIES:
 :CUSTOM_ID: case-study-adata-expunged-mouse
 :END:
@@ -320,7 +317,7 @@ defective keyboard (if you are insane enough to buy the old butterfly
 switches), a defective cable that has a bus that goes straight into the
 CPU right next to a power line.
 
-** Unnecessary complication
+* Unnecessary complication
 :PROPERTIES:
 :CUSTOM_ID: unnecessary-complication
 :END:
@@ -348,7 +345,7 @@ The one person that bluntly told corporations to instead consider making
 their hardware less shitty, ended up earning an undeserved reputation.
 And mainly because it was one or maybe two people doing that.
 
-** General computation in the third millenium
+* General computation in the third millenium
 :PROPERTIES:
 :CUSTOM_ID: general-computation-in-the-third-millenium
 :END:
@@ -464,7 +461,7 @@ outside of their IDEs; and FPGAs seem the last general compute platform
 you have control over, even if only hypothetically. This topic deserves
 its own article.
 
-** Conclusion
+* Conclusion
 :PROPERTIES:
 :CUSTOM_ID: conclusion
 :END:

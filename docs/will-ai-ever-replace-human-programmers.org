@@ -1,25 +1,14 @@
---------------
+#+TITLE: Will "A" """I""" Ever Completely Replace Humans
 
-** title: Will "A" """I""" Ever Completely Replace Humans
-:PROPERTIES:
-:CUSTOM_ID: title-will-a-i-ever-completely-replace-humans
-:END:
-* Will "A" """I""" Ever Completely Replace Humans
-:PROPERTIES:
-:CUSTOM_ID: will-a-i-ever-completely-replace-humans
-:END:
-::: info This article is taken from the Odysee Cyberlounge. Given that
+info This article is taken from the Odysee Cyberlounge. Given that
 the author of this article retains the complete copyright, we have
-decided to move the articles together. :::
+decided to move the articles together.
 
 The short answer is /no/. Thank you all for clicking!
 
 Ah! You want a longer answer. Ok then. Let's set up the question first.
 
 * A bit of history.
-:PROPERTIES:
-:CUSTOM_ID: a-bit-of-history.
-:END:
 Artificial intelligence is a hard to define concept. In the days of
 Charles Babbage, likely anything that was capable of arithmetic would
 have passed as an AI.
@@ -141,7 +130,7 @@ to be confused with Ajit Pai, who would never pass the Turing test),
 allows us to compare programming to other fields, where algorithms and
 “AI” have already been introduced.
 
-*** Lost in translation
+** Lost in translation
 :PROPERTIES:
 :CUSTOM_ID: lost-in-translation
 :END:
@@ -200,7 +189,7 @@ here, precision allows the AI more leverage, but also moves the
 goalpost: you now not only have to outcompete a human, but you have to
 make sure that the human is what's holding back the translation.
 
-*** AI in Maths
+** AI in Maths
 :PROPERTIES:
 :CUSTOM_ID: ai-in-maths
 :END:
@@ -261,7 +250,7 @@ area in which serious tools like =coq= were truly developed. This is the
 place where ordinary algorithms ought to have been front and centre. Yet
 not much has changed.
 
-*** We don't have "too much automation"
+* We don't have "too much automation"
 :PROPERTIES:
 :CUSTOM_ID: we-dont-have-too-much-automation
 :END:
@@ -306,7 +295,7 @@ took place, they were glacial, and mostly affected areas where a human
 would have been much worse than a machine, and even then not /every/
 such case, but only a small subset.
 
-*** Machines aren't too creative.
+** Machines aren't too creative.
 :PROPERTIES:
 :CUSTOM_ID: machines-arent-too-creative.
 :END:
@@ -344,7 +333,7 @@ unless the AI is fully self-aware and capable of completely replacing
 humans in /everything/ at once, it would still be inferior to a person
 in some cases.
 
-*** Games
+** Games
 :PROPERTIES:
 :CUSTOM_ID: games
 :END:
@@ -402,7 +391,7 @@ however something that can pass for a human in an ordinary conversation
 is still decades away. Within our lifetime the odds of being
 out-creative'd by a machine are very slim.
 
-*** Humans understand humans better
+** Humans understand humans better
 :PROPERTIES:
 :CUSTOM_ID: humans-understand-humans-better
 :END:
@@ -432,11 +421,9 @@ ruin your day.
 
 For today, no-one understands humans better than humans.
 
-** What might happen
-:PROPERTIES:
-:CUSTOM_ID: what-might-happen
-:END:
-*** AI as augmentation of workers
+* What might happen
+
+** AI as augmentation of workers
 :PROPERTIES:
 :CUSTOM_ID: ai-as-augmentation-of-workers
 :END:
@@ -472,7 +459,7 @@ code into a newer training set, which would be good if you are aware and
 OK with this, and is another area where new laws must exist, if you're
 not.
 
-*** Understaffed projects will be more viable
+** Understaffed projects will be more viable
 :PROPERTIES:
 :CUSTOM_ID: understaffed-projects-will-be-more-viable
 :END:
@@ -501,7 +488,7 @@ amount of time as it takes you to develop it, mine will perform better.
 Want to build your own operating system? Now you can. The biggest
 challenge would be to get other people to use it, though.
 
-*** Projects with neat ideas will diverge further
+** Projects with neat ideas will diverge further
 :PROPERTIES:
 :CUSTOM_ID: projects-with-neat-ideas-will-diverge-further
 :END:
@@ -516,7 +503,7 @@ time. As a result, projects for which Linux is not a good fit, would
 write their own kernels, and have about as much driver support as they
 need.
 
-*** AI can be the final nail in security by obscurity.
+** AI can be the final nail in security by obscurity.
 :PROPERTIES:
 :CUSTOM_ID: ai-can-be-the-final-nail-in-security-by-obscurity.
 :END:
@@ -555,7 +542,7 @@ internet or could compromise the users' data or device are likely to be
 exposed while trade-secret internals can be safely hidden, as they, with
 a properly designed interface are less prone to being exploited.
 
-*** A brain-computer interface becomes one step closer
+** A brain-computer interface becomes one step closer
 :PROPERTIES:
 :CUSTOM_ID: a-brain-computer-interface-becomes-one-step-closer
 :END:
@@ -574,7 +561,7 @@ can /learn/ to understand the behaviour of a programmer, and thus be the
 tailored interface. Sadly, it would make mechanical keyboards and
 programmers' Dvorak obsolete.
 
-*** Programming paradigms will shift.
+** Programming paradigms will shift.
 :PROPERTIES:
 :CUSTOM_ID: programming-paradigms-will-shift.
 :END:
@@ -595,7 +582,7 @@ You can write FORTRAN in any language
 
 a complete and utter reality.
 
-*** Fewer jobs in programming.
+** Fewer jobs in programming.
 :PROPERTIES:
 :CUSTOM_ID: fewer-jobs-in-programming.
 :END:
@@ -617,7 +604,7 @@ because the artisan shall use tools to greater effect than tools
 themselves can be used on their own. This simple fact, means that few
 companies will opt for fully automated solutions.
 
-** Conclusion
+* Conclusion
 :PROPERTIES:
 :CUSTOM_ID: conclusion
 :END:
