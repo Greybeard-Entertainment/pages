@@ -1,7 +1,7 @@
 ** January 2024
-- [[./linux-phone-security][Linux phone (in)security]]
-- [[./llms-replace-humans][LLMs won't replace humans tomorrow]]
-- [[./the-driver-shenanigans-could-have-been-an-email][The driver shenanigans could have been an email]]
+- [[./linux-phone-security.org][Linux phone (in)security]]
+- [[./llms-replace-humans.org][LLMs won't replace humans tomorrow]]
+- [[./the-driver-shenanigans-could-have-been-an-email.org][The driver shenanigans could have been an email]]
 
 ** CyberLoung archive  
 - Cyber Lounge: [[./kill-the-ads-save-the-planet.md][Kill the Ads, Save the Planet]]
