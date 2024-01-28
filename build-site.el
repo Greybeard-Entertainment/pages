@@ -32,7 +32,20 @@
 
 (setq org-html-validation-link nil)
 
+(defconst stylesheet "style1.css")
+;; Custom appearance
+(setq org-html-validation-link nil            ;; Don't show validation link
+      org-html-head-include-scripts nil       ;; Use our own scripts
+      org-html-head-include-default-style nil ;; Use our own styles
+      org-html-head (format "<link rel=\"stylesheet\" href=\"%s\" />" stylesheet))
+
 ;; Generate the site output
 (org-publish-all t)
+
+
+
+;; Copy local css
+(message (format "Copying CSS ./docs/%s" stylesheet))
+(copy-file (format "./docs/%s"stylesheet) "./public/" t nil nil nil)
 
 (message "Build complete")

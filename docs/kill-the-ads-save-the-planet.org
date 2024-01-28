@@ -2,9 +2,12 @@
 #+AUTHOR: Aleksandr Petrosyan and Gabriel Syme
 #+DATE: 29.07.2021
 #+LANGUAGE: en_GB
+#+LINK_UP: index.html
 
+#+BEGIN_aside
 This article is taken with permission from NukeOp (Gabriel
 Syme) from the official CyberLounge Odysee.
+#+END_aside
 
 * Kill the Ads, Save the Planet
 :PROPERTIES:
