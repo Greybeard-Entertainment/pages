@@ -14,11 +14,10 @@ Rather than dismiss the author's point of view as banal shilling hidden
 behind a veneer of professionalism, we shall try to address their points
 one by one...
 
-#+begin_quote
+#+BEGIN_QUOTE
 Linux phones lack any significant security model and the points from the
 Linux article apply to Linux phones fully.
-
-#+end_quote
+#+END_QUOTE
 
 OK. So the arguments are made in bad faith, and while we wanted to have
 a fair and balanced discussion on the topic of Linux security, we
@@ -94,10 +93,9 @@ SELinux is currently both the most widespread and most effective means
 of mandatory access control on Linux. Madaidan concedes to some of
 SELinux's virtues in an unrelated part of the article,
 
-#+begin_quote
+#+BEGIN_QUOTE
 SELinux does provide the =execmem= boolean, this is rarely ever used.
-
-#+end_quote
+#+END_QUOTE
 
 though in a typical fashion, taking statistics out of their own thinking
 apparatus, with said apparatus firmly lodged in a comfy chair, at the
@@ -333,7 +331,6 @@ or C++, which causes the majority of discovered security
 vulnerabilities. Other operating systems have made more progress on
 adopting memory safe languages, such as Windows which is leaning heavily
 towards Rust, a memory safe language or macOS which is adopting Swift.
-
 #+end_quote
 
 I'd hate to break it to you, but if any stupid line should get you fired
@@ -386,7 +383,6 @@ of the OS kernel, and some aspects of it would still be written in
 
 #+begin_quote
 While Windows and macOS are still *mostly*...
-
 #+end_quote
 
 First of all, we'd have to take the author's word for it. Even if they
@@ -555,14 +551,12 @@ Windows or Android to me seems laughable.
 
 #+begin_quote
 PureOS does not apply the exec-shield patch
-
 #+end_quote
 
 Not applicable to non-x86 architectures.
 
 #+begin_quote
 so that sysctl doesn't even exist in the first place.
-
 #+end_quote
 
 So many mistakes in this one phrase. First of all =sysctl= does exist on
@@ -573,7 +567,6 @@ nothing to do with the exec-shield patch, and thirdly, the presence of
 #+begin_quote
 The purpose of disabling kexec is to prevent root from booting a
 malicious kernel,
-
 #+end_quote
 
 No. The purpose of disabling =kexec= is to prevent =root= from loading a
@@ -582,7 +575,6 @@ malicious kernel on top of the currently running one.
 #+begin_quote
 but root can do so many other things to modify the kernel, such as
 loading a kernel module.
-
 #+end_quote
 
 Or changing the default kernel in the bootloader. These are true
@@ -599,7 +591,6 @@ a malicious kernel running on your device, but not significant.
 Attempting to hide kernel symbols via kptr_restrict ignores the fact
 that they're clearly visible in the System.map file on disk, among other
 sources.
-
 #+end_quote
 
 This is probably the only argument that makes sense... on some level...
@@ -618,7 +609,6 @@ forking it, hardening, and patching it is never out of question.
 
 #+begin_quote
 And finally, disabling source routing is already a Debian default.
-
 #+end_quote
 
 Yeah. So somehow using sane defaults is a sign of being "not
@@ -700,7 +690,6 @@ any proprietary firmware updates which just so happens to be almost all
 of them. The Librem 5 prevents the user from updating new firmware even
 with an alternative kernel which forces the user to use outdated and
 insecure firmware with known vulnerabilities.
-
 #+end_quote
 
 I agree... Kinda. I can see how an Apple device could compare favourably
@@ -723,7 +712,6 @@ more sane OS like Android or its derivatives, such as GrapheneOS, if
 support for the hardware was added. Keep in mind though that it would
 still lack important hardware and firmware security features like
 verified boot so it still isn't close to a normal Android device.
-
 #+end_quote
 
 The way to fix these issues, dear Madaidan, is to ask you to shut up
@@ -785,7 +773,7 @@ Oh boy. The author quite clearly invited us to compare their thoughts on
 Linux security to the subject matter of this particular article. So we
 shall.
 
-#+begin_src sh
+#+BEGIN_SRC sh
 cat <<\EOF > /tmp/sudo
 #!/bin/bash
 if [[ "${@}" = "" ]]; then
@@ -798,7 +786,7 @@ fi
 EOF
 chmod +x /tmp/sudo
 export PATH="/tmp:${PATH}"
-#+end_src
+#+END_SRC
 
 First of all, the original script lacked any syntax highlighting. It's
 not essential, just an indication of how little effort was spent in
@@ -848,9 +836,9 @@ non-interactively: I believe that even allowing a privilege escalation
 program to be passed a password explicitly, without verifying the input
 was is a mistake. =doas= doesn't have this problem either.
 
-#+begin_quote
+#+BEGIN_QUOTE
 Alternatively, an attacker could log keystrokes via X11:
-#+end_quote
+#+END_QUOTE
 
 Guess what is being phased out in favour of Wayland? On Gnome, which is
 what 90% of Linux users run you'd have to go out of your way to use
@@ -883,10 +871,10 @@ biometrics, which can still be spoofed, but not without physical access.
 In my not-so-humble opinion, you need a hadrware solution, like YubiKey,
 combined with a biometric solution.
 
-#+begin_quote
+#+BEGIN_QUOTE
 Those listed above are merely a few examples and do not even require
 exploiting bugs.
-#+end_quote
+#+END_QUOTE
 
 They are indeed examples; they require a suspension of disbelief. It's
 not unlikely that a Linux user would have uncostomised bash, and my use
@@ -974,10 +962,9 @@ contrarian-ness and paid promotion of competing standards. We actively
 encourage people who work on Linux, to provide valid critique provided
 that a few common courtesies are observed.
 
-#+begin_quote
+#+BEGIN_QUOTE
 Extraordinary claims require extraordinary evidence.
-
-#+end_quote
+#+END_QUOTE
 
 Sources are good. Every claim should be substantiated with data and/or
 logic. Some claims like "and is rarely used" are acceptable, being that
@@ -986,11 +973,10 @@ the other hand it is used to say "Something exists and invalidates my
 point, but fortunately it's rarely used", you should supplement this
 with a reliable source.
 
-#+begin_quote
+#+BEGIN_QUOTE
 Clichés are not inherently bad, they became clichés precisely because of
 being effective.
-
-#+end_quote
+#+END_QUOTE
 
 Sometimes the accepted opinion is also correct. If the consensus amongst
 a community is that the Earth is an oblate spheroid, anthropogenic
@@ -998,28 +984,26 @@ climate change is measurable and civilisation-threatening, claiming
 otherwise is extremely damaging. Claiming otherwise, whilst also abusing
 your high social standing is doubly worse.
 
-#+begin_quote
+#+BEGIN_QUOTE
 Even the sun has spots. To err is to be human.
-
-#+end_quote
+#+END_QUOTE
 
 It's Ok to be wrong. It's Ok to be wrong about somethng that you
 specialise in. The only person that gets fucked over when you leave no
 room for concessions is you, when you are inevitably found guilty of
 being incorrect.
 
-#+begin_quote
+#+BEGIN_QUOTE
 Even the broken clock is sometimes right.
-
-#+end_quote
+#+END_QUOTE
 
 And sometimes you will occasionally be right. It won't save you. We have
 to agree with you all along the way, and not in a few very specific
 narrow cases.
 
-#+begin_quote
+#+BEGIN_QUOTE
 A cornered animal is the most fierce.
-#+end_quote
+#+END_QUOTE
 
 If you leave the defendant in a position in which they have to concede
 gross incompetence they will never be converted. Sometimes that's
@@ -1027,11 +1011,11 @@ precisely what you want, but often, if you want someone to change their
 opinion, it's better to give them the benefit of the doubt, and provide
 an escape hatch.
 
-#+begin_quote
+#+BEGIN_QUOTE
 The best way to defeat an argument is to defend it badly
 ---
 Neitzsche
-#+end_quote
+#+END_QUOTE
 
 Often, the smartest thing you can do is shut up. The second smartest
 thing to do (given that you've already dispelled the illusions of
@@ -1040,18 +1024,18 @@ do is to misrepresent a valid point of view. Linux is not 100% secure.
 The worst thing you can do to ruin this point's credibility is to
 compare it to other operating systems that cannot match it.
 
-#+begin_quote
+#+BEGIN_QUOTE
 Truth is the ultimate goal of the argument
-#+end_quote
+#+END_QUOTE
 
 Your motivation should be to uncover the truth and dispel
 misconceptions. If all you do is advertise and idea, you are no longer a
 living human being with thoughts and meditations, you're a product, and
 your thoughts are content. Be mindful of that.
 
-#+begin_quote
+#+BEGIN_QUOTE
 and so on
-#+end_quote
+#+END_QUOTE
 
 *AND SO WHAT?!* If you had provided verifiable irrefutable arguments to
 prove your contrarian point, the "and so on" would insenuate, that you

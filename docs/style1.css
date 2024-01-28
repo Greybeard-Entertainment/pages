@@ -1,50 +1,49 @@
-
 * {
-    background: #333333;
-    color: #eeeeee;
+	background: #333333;
+	color: #eeeeee;
 }
 
 .content {
-    column-width: 40em;
+	column-width: 40em;
 }
 
 a {
-    color: #aaaaff;
+	color: #aaaaff;
 }
 
 .title {
-    font-family: "IBM Plex Serif Thin";
-    font-size: 300%;
-    text-align: center;   
+	font-family: "IBM Plex Serif Thin";
+	font-size: 300%;
+	text-align: center;
 }
 
-.aside {
+.aside, .ASIDE {
     font-family: "IBM Plex Mono";
-    font-size: 80%;
-    margin-left: 4em;
-    margin-right: 25%;
-    padding: 1em;
-    outline: solid;
-    outline-color: #00000033;
-    background: #00000015;
+	font-size: 80%;
+	margin-left: 4em;
+	margin-right: 25%;
+	padding: 1em;
+	outline: solid;
+	outline-color: #00000033;
+	background: #00000015;
 }
 
 p {
-    font-family: "IBM Plex Sans";
-    text-align: justify;
-    margin-left: 2.9em;
-    margin-right: 2em;
+	font-family: "IBM Plex Sans";
+	text-align: justify;
+	margin-left: 2.9em;
+	margin-right: 2em;
 }
 
 h2, h3, h4, h5, h6 {
-    font-family: "IBM Plex Serif Thin";
-    margin-left: 0.8em
+	font-family: "IBM Plex Serif Thin";
+	margin-left: 0.8em
 }
 
 #table-of-contents{
-    margin: 2em;
+	margin: 2em;
 }
 
 img {
-    max-width: 38em;
+	max-width: 38em;
 }

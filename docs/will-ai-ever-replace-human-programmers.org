@@ -3,9 +3,16 @@
 #+DATE: 22.07.2021
 #+LANGUAGE: en_GB
 
+#+BEGIN_ASIDE
 info This article is taken from the Odysee Cyberlounge. Given that
 the author of this article retains the complete copyright, we have
 decided to move the articles together.
+#+END_ASIDE
+
+* Introduction
+:PROPERTIES:
+:CUSTOM_ID: introduction
+:END:
 
 The short answer is /no/. Thank you all for clicking!
 

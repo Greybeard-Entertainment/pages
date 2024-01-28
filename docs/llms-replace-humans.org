@@ -3,6 +3,11 @@
 #+DATE: 03.01.2024
 #+LANGUAGE: en_GB
 
+* Introduction
+:PROPERTIES:
+:CUSTOM_ID: introduction
+:END:
+
 #+ATTR_HTML: :width 100%
 [[https://commons.wikimedia.org/wiki/File:IBM_150_Extra_Engineers_1951.jpg][https://upload.wikimedia.org/wikipedia/commons/b/b8/IBM_150_Extra_Engineers_1951.jpg]]
 

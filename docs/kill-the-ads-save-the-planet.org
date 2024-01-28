@@ -9,11 +9,10 @@ This article is taken with permission from NukeOp (Gabriel
 Syme) from the official CyberLounge Odysee.
 #+END_aside
 
-* Kill the Ads, Save the Planet
+* Introduction
 :PROPERTIES:
-:CUSTOM_ID: kill-the-ads-save-the-planet
+:CUSTOM_ID: introduction
 :END:
-GNU/Alex and Gabriel Syme /Cyber Lounge/ 29/07/2021
 
 [[/res/img/Chris_Abney__area_covered_with_green_leafed_plants.jpg]]
 
@@ -53,6 +52,7 @@ the highest bidder to do with as they please till the end of time?
 :PROPERTIES:
 :CUSTOM_ID: how-to-actually-save-energy
 :END:
+
 Cryptocurrencies are getting a lot of bad reputation lately. The press
 talks about it as if it were the single worst thing for the environment.
 It doesn't even come close.

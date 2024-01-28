@@ -3,10 +3,14 @@
 #+DATE: 17.11.2021
 #+LANGUAGE: en_GB
 
+#+BEGIN_ASIDE
 This article was taken from the official [[https://odysee.com/@CyberLounge:a][Cyber Lounge]] [[https://odysee.com/][Odysee]].
+#+END_ASIDE
 
+#+BEGIN_ASIDE
 This article is a knee-jerk response to a BS listicle on the
 MakeUseOf website.
+#+END_ASIDE
 
 * User Safety
 :PROPERTIES:
