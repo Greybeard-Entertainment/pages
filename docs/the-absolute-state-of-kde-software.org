@@ -1,0 +1,32 @@
+#+TITLE: The absolute state of KDE software
+#+AUTHOR: Aleksandr Petrosyan
+
+I am an avid user of KDE.  One of the main reasons I like it, is because it is built around the idea of user customization.  I do not know to what extent is this owed to the complete and utter takeover of Gnome by corporate interests, but it is, by far, the only polished desktop environment that does so (XFCE and LXDE/LXQT lacking in polish).
+
+However, the KDE project is massive and some parts of it have not seen a good amount of elbow grease in a while. Rather than bash the engineers that are already doing a spot-on job and in many ways exceed even the most humble of my expectations, I'd rather use this to answer some questions that most people might have, and try to assuage some of the concerns about the project's health.
+* The unfortunate Kool Desktop Environment, a historical overview
+
+The reason it's called KDE to this day, and has an obsession with a letter that entered latin through greek transcriptions, is very simple.  There used to be a Common Desktop environment and KDE was its counterpart.
+
+KDE used to be the only game in town.  That didn't mean that everything was written in Qt back in the day, many of the programs didn't even have the concept of a toolkit, instead opting for using the X11 primitives directly.
+There are some programs that do it to this day, but they also have a habit of being very obvious and rather unpolished, which is why it is not the default and modern programmers try to avoid using that (plus, there's a substantial amount of extra work involved, and Wayland has no such thing).
+
+So at one point, KDE had the option of being proprietary, which (for obvious reasons) didn't go well with the GNU/Linux community.  As a backlash-lash, the GNu Object Model Environment was invented, using the GIMP toolkit; or rather Gnome was built using GTK.  After that point Qt and KDE have become very much so on the side of Free Software, but the damage was likely already done.
+
+#+BEGIN_aside
+This is in no way problematic.  In fact, this is the way /many/ programs go today, and while it is sad that they do, we are sympathetic to the reason for why they do it; the open source software model that which itself is a much milder version of the Free Software Model lacks an effective monetisation scheme under modern day capitalism.  We are sympathetic to the fact that a lot of people are good at their job and want to get paid for it, so as a result, we can't exactly blame KDE for attempting to be proprietary.
+#+END_aside
+
+Aside from reputational problems, Gnome, for a while at least, had feature parity with KDE, whilst differentiating itself from Windows sufficiently to entice people to try it.  My first brush with GNU/Linux, Mandriva Linux had either the KDE or Gnome options.  The best way to describe KDE, and something which immediately turned me away from the idea of using Mandriva, was that it was a facsimile of the default Windows shell.  And while the decription to me today sounds incredibly reductive, here's why it's accurate: you cannot communicate the feel of something, or take a snapshot of all possible extensions via video or screenshot.  Most software projects don't even have screenshots anymore.  So one can be forgiven for looking at a screenshot of plasma and saying it looks exactly like Windows: one single taskbar facsimile at the bottom, which replicates the features all the way down to defaulting to left aligned iconic representations, no virtual desktops by default, a "start" menu on the left, and the familiar tray + clock on the right.  Still, this is not very representative of the philosophy.  In Jonathan Blow's words, "they (open source projects) don't do anything creative.  They only imitate." But that is not what KDE is doing, despite it appearing to be so.  More on that later.
+
+Whatever one's opinion, KDE was almost always seen as a Windows-like DE to outsiders.
+
+With the release of KDE 4, and KDE surpassing Windows in terms of transparent elements in the UI, KDE became known as the buggy desktop environment.  And for good reason.  KDE 4 was a massive step in a different direction.  That step necessitated a large amount of code to be changed, as a result, a lot of bugs were implemented.  I did not like KDE at that time, which was painful given the potential of both this toolkit and DE.
+
+KDE was the project that almost always had something not quite right with it, leading to many people rightfully accepting the conensus opinion that it was just not worth it.  But that does not in any way shape or form represent KDE.
+
+This project is far more interesting than we give it credit for, much too ambitious for its own good, and in many areas surprisingly polished.  This project deserves more love than it gets, but also a bit more guidance than it would care to admit.  But first, have you ever wondered why KDE isn't as widely used?
+
+* Popularity troubleshooting
+
+We do not know why some people choose one thing over others.  I'm quite surprised that I like KDE more than I like many other languages.
