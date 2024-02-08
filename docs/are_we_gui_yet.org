@@ -1,0 +1,136 @@
+#+TITLE: Are We GUI Yet
+#+AUTHOR: Aleksandr Petrosyan
+
+
+This is a tiny discussion of why if you're writing your GUI in rust, life is difficult for you.
+
+* Notes on Qt
+
+It has problems.
+
+Have to fuck around with the build system.
+
+
+#+BEGIN_SRC console
+error: failed to run custom build command for `universal_config_gui v0.1.0 (/home/app/Git/universal_config_gui)`
+
+Caused by:
+  process didn't exit successfully: `/home/app/Git/universal_config_gui/target/debug/build/universal_config_gui-a52f0ab31450bbcd/build-script-build` (exit status: 101)
+  --- stdout
+  cargo:rerun-if-changed=src/cxxqt_object.rs
+  cargo:rerun-if-changed=qml/qml.qrc
+  cargo:rustc-link-arg=-fuse-ld=lld
+  cargo:rerun-if-env-changed=QMAKE
+  cargo:rerun-if-env-changed=QT_VERSION_MAJOR
+  cargo:rustc-link-search=/usr/lib
+  cargo:rustc-link-lib=Qt6Core
+  cargo:rustc-link-lib=Qt6Network
+  cargo:rustc-link-search=/usr/lib
+  cargo:rustc-link-lib=Qt6Core
+  cargo:rustc-link-lib=Qt6Qml
+  cargo:rustc-link-search=/usr/lib
+  cargo:rustc-link-lib=Qt6Network
+  cargo:rustc-link-search=/usr/lib
+  cargo:rustc-link-lib=Qt6Core
+  cargo:rustc-link-lib=Qt6Gui
+  cargo:rustc-link-search=/usr/lib
+  cargo:rustc-link-lib=Qt6Core
+  cargo:rustc-link-search=/usr/lib
+  cargo:rustc-link-lib=GLX
+  cargo:rustc-link-search=/usr/lib
+  cargo:rustc-link-lib=OpenGL
+  cargo:rerun-if-changed=/home/app/Git/universal_config_gui/src/cxxqt_object.rs
+
+  --- stderr
+  thread 'main' panicked at /home/app/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cxx-qt-gen-0.5.3/src/syntax/qtfile.rs:44:57:
+  Could not read path {} to string: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+warning: build failed, waiting for other jobs to finish...
+#+END_SRC
+
+Where in this error message can you find mention of either the missing file: =cxxqt_object.rs=, or the file that was actually present but wasn't supposed to be: =q_object.rs=.   Why bother with Rust at this point, if you're going to get shitty Qt library feedback might as well remove the extra layer of indirection
+
+Have to fuck around with the Qt abstractions rather than circumvent them in a Rust-idiomatic way.
+
+Error handling.  Every function is both potentially fallible and never leaving you with any option to handle the error.
+
+Example,
+
+#+BEGIN_SRC rust
+fn main() {
+	// Create the application and engine
+	let mut app = QGuiApplication::new();
+	let mut engine = QQmlApplicationEngine::new();
+
+	// Load the QML path into the engine
+	if let Some(engine) = engine.as_mut() {
+		engine.load(&QUrl::from("qrc:/main.qml"));
+	}
+
+	// Start the app
+	if let Some(app) = app.as_mut() {
+		app.exec();
+	}
+}
+#+END_SRC
+
+Engine returns an =Option= which is idiomatic Rust.  Not my preferred style, but I can forgive that.
+
+In Rust all lines that can fail, do so in one of two ways: either a panic, which can be controlled, but usually results in a traceback and termination, or by forwarding a =Result=.  Guess which of these does =engine.load= do? Well, it locks up the process, and prints a message that it couldn't find the file in the =qrc=.
+
+Now I've done this before, so I know what was missing.  But imagine that I didn't.  What, in your error message indicates what I need to do?
+
+Second problem is in the form of =app.exec=.  This is a blocking call.  More importantly this is a blocking call that /must/ live on the main thread.  Do you know what this means?  Exactly, it means that if you try and use =tokio= with this thing, you are going to find your life miserable.  See above.
+
+But to be quite honest, these things are problematic, but can be chalked up to a skill issue.  WHat about the potential productivity?
+
+Well, again, I would argue that exposing your Rust code via =extern "C"= is likely going to be more productive.  Inheritance, the C++ macros are implicit, shall we say...  baked into Qt.  It cannot exist without those features existing in other languages.
+
+And that's the key problem.
+
+I get almost none of the benefits of Rust, because of the exposure to Qt.  There's no way of combining the two APIs.  There's no way to circumvent the meta-object-compiler, and Rust is compiled to something that has all of the features of a C++ class.  Just use C++ then.  C++ isn't that terrible, and it would give you a much better range of documentation.  In Rust, you'd be lucky to find a tutorial.
+
+One area I'll give Rust an advantage, is that idiomatic Rust is much more prone to attribute macros: so code like this is not out of the ordinary:
+#+BEGIN_SRC rust
+#[cxx_qt::bridge]
+mod my_object {
+
+	#[cxx_qt::qobject(qml_uri = "demo", qml_version = "1.0")]
+	#[derive(Default)]
+	pub struct Hello {}
+
+	impl qobject::Hello {
+		#[qinvokable]
+		pub fn say_hello(&self) {
+			println!("Hello world!")
+		}
+	}
+}
+#+END_SRC
+
+What is out of the ordinary, is that this object needs to be registered in the =build.rs= "script".  This is, for lack of a better word, not a footgun.  Much worse than that, it is a crotch gun, with extra hot rounds, and a hair trigger.
+
+I can see this being improved in later iterations, but I don't think that it is wise to depend on these either directly, using either =PySide= or proper C++, or to not engage with Qt at all.
+
+Alas, because I had already tried to implement a parser in C++, so I will try and take the second approach.  I still think that contributing to the C++ ecosystem via Qt applications using the native C++ is probably something I'll keep doing.  However, I will do so as part of pre-existing KDE projects, not by creating a new project.
+
+* GTK on Relm4
+
+This is problematic.  I find that the amount of boilerplate needed to accommodate the stupidity of GTK also not doing things right in the exact same way as Qt is just too much for me.
+
+It's possible to do that.  But I sincerely doubt it'd be a useful use of my time.  Generating an ad-hoc component requires a "factory", (which is a sign of abstraction creep).
+
+Plain GTK4 is a problematic library.  For one simple reason.  The library breaks, and it requires dynamic linkage.  As such, this results in the program being potentially unmaintainable, if one does not wish to spend an inordinate amount of time fixing problems on platforms they don't even have.
+
+One way to fix it is to do static linkage.  The other way is to package into a reproducible format (/e.g./ =nix=, or =guix=).  Finally as a last resort, one can package the problem into slighty (and only slightly) less defective packaging standards, snaps and flatpaks.
+
+
+* Iced
+his is raw.  But it is a forward-looking time investment.  At the very least it is actively developed and statically linked.  
+
+Let me explain why those two points are extremely important.  Firstly, and most importantly, there's no issue of outdated system libraries. Yes, you're wasting a bit more space that way, but far less than if you actually used a Flatpak and lost CPU cycles/had to do a bunch of =unsafe= to work around FFI.
+
+Secondly, the static linkage allows me to go into the implementations of the native components and write a new one in Rust. If that is not important, consider how much work would I need to do in order to do the same  with... I don't know, maybe Qt components. It is a foregone conclusion that any real implementation of a new Qt component is going to merely expose a QML interface, but be implemented in C++ and highly optimised.  
+Now consider that it is not even not standard C++ it is not even the latest standard /of/ C++ that is, for lack of a better word, shoved down our throats. This is for lack of a better term, a problem. I don't know if it's going to be a good idea to do that.  
+
+The most important aspect in my opinion is to take good care of the 
