@@ -9,6 +9,7 @@
 - [[./linux-phone-security.org][Linux phone (in)security]]
 - [[./llms-replace-humans.org][LLMs won't replace humans tomorrow]]
 - [[./the-driver-shenanigans-could-have-been-an-email.org][The driver shenanigans could have been an email]]
+- [[file:the-absolute-state-of-kde-software.org][The absolute state of KDE Software]]
 
 ** CyberLounge
 - Cyber Lounge: [[./kill-the-ads-save-the-planet.org][Kill the Ads, Save the Planet]]
