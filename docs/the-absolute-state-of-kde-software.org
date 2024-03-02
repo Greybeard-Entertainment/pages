@@ -4,7 +4,7 @@
 I am an avid user of KDE.  One of the main reasons I like it, is because it is built around the idea of user customization.  I do not know to what extent is this owed to the complete and utter takeover of Gnome by corporate interests, but it is, by far, the only polished desktop environment that does so (XFCE and LXDE/LXQT lacking in polish).
 
 However, the KDE project is massive and some parts of it have not seen a good amount of elbow grease in a while. Rather than bash the engineers that are already doing a spot-on job and in many ways exceed even the most humble of my expectations, I'd rather use this to answer some questions that most people might have, and try to assuage some of the concerns about the project's health.
-* The unfortunate Kool Desktop Environment, a historical overview
+* The (un)fortunate Kool Desktop Environment, a historical overview
 
 The reason it's called KDE to this day, and has an obsession with a letter that entered latin through greek transcriptions, is very simple.  There used to be a Common Desktop environment and KDE was its counterpart.
 
@@ -243,8 +243,153 @@ And if you want a positive example; take =synaptic= or =octopi=.  Those programs
 
 **** Lesson 11:
 
-Kill it with fire.
+Kill it with fire.  Rise from the ashes.
 
 Some projects are too far gone to be salvageable.  Given that Discover sticks out on KDE like a sore thumb, just disowning the project and stopping pouring even more resources into it is a good idea.
 
-And frankly, I don't think it should exist.  Each distribution has a package manager, they know it best, so they should develop a graphical front-end for it.  I don't think you need to replace it with anything.  Just kill it.  Or make it Ubuntu-specific.  Look, I get that you want to support as many distributions with as many package managers as possible.  You shouldn't encourage them to make package managers different for the sake of being different.   They either have something useful in their differences, in which case you'd need package-manager-specific changes, or they don't, in which case they should just conform to the familiar APIs of familiar tools like =yum=, =dnf=, or =apt=.   It's bad enough that the repositories are different for systems that have no other discernible differences, now having different syntaxes for the exact same fucking program is not something that you should encourage.
+This is perhaps a little inflamatory, but hear me out.  Most GNU Linux distributions are capable enough to produce a package manager.  Why aren't they equally capable of producing a package manager based off of a common set of libraries? Turn Discover into a set of UI libraries that can be tacked onto an existing package infrastructure.  While package managers aren't obliged to have a stable ABI, encourage projects to fork Discover and do something with it.  As an added benefit, this would allow the package manager-specific configurations to exist somewhere, and not be chopped off by something like =packagekit= or =appstream=.  Link statically instead of dynamically.  Take edge cases into account and make each instance of Discover its own thing that exists within the framework of the rest of the packaging system.
+
+There's *very* good reasons to do it this way, not least of which, that the only package managers that feel "at home" when used with Discover are precisely the ones that could be added as direct dependencies, and that could report domain-specific errors without an unnecessary level of abstraction.  It might seem that I'm arguing minimalism, but that extra level of abstractions means the difference between an error message with a clear set of steps to fix, and an unintelligible mess that *can't* be fixed.
+
+** The Calligra Office Suite
+
+I'm lumping all of the programs together, because my comments probably pertain to all of them at once.
+
+Creating an office suite, especially on Linux, and especially in an environment wherein any difference from Micro$oft Office are heavily suppressed, is difficult.  Plus, most of the time, even though Microsoft can afford millions in development costs, and probably doesn't need to, while simultaneously extracting huge profits, LibreOffice /et al/ are all fundamentally working on a shoestring budget.  They are not celebrated for their achievements, but shunned for losing in an unfair competition.
+
+Sure one could make the argument that GNU Linux itself is fighting a similarly uphill battle, but at the same time, consider that the vast majority of people that use windows, have very good reasons to do so.  They have very good reasons to continue using Windows and unlikely to switch unless there's a very good reason to switch.  And with Microsoft Office, because it is meant as a medium of exchange, and one cannot individually decide not to use Microsoft Office and expect there to be no repercussions, there is a lot less good will.
+
+So I would say that the office suite has potential but is miles behind anything even remotely comparable.  Make no mistake, I would use a decent office suite over LaTeX any day of the week, especially if it had a well-defined domain-specific language that defined the document.  Incidentally =lyx= is perhaps what I would have liked the industry to move towards...  but that program has its own issues, and they need to be touched upon separately.
+
+So what can I say? They do not reproduce documents reliably.  This is a dealbreaker, and something that *shouldn't* but has still happened with the open XML-based formats.  When MS office was moving away from a binary format, towards an extensible plaintext format (which is kinda dumb), the world was dominated by XML.  Nowadays the world has moved on to JSON, and writing a document processor based on JSON is something even a mediocre JavaScript kiddie can do in a matter of hours.  At the same time, LibreOffice and many of its brethren still rely  on XML and at that, fail to reproduce the open document formats reliably.  And that means that a document written in LibreOffice cannot be relied upon to be accurately represented in the respective KDE office application (which shall not be named).  This is not acceptable and something that must be fixed eventually.  At the time of writing, however, given the apathy towards office formats that are not Google Docs, it's unlikely to happen.
+
+Calligra words (OK I lied), is a fine application that is basically useless.  It's not fun to interact with and the kinds of people that keep Emacs and Vim alive, are not going to spend hours of their life fixing the problems inherent in an XML-based document format.
+
+Spreadsheets? This is slightly different.  Only slightly, because there seems to be consensus that the cell-based accounting system that is inherent in spreadsheets is not a great solution long-term.   Do you know of many accounting firms that use Excel directly and if you did, would you trust them.  More importantly, the data is often either shared in a format in which the spreadsheet is irrelevant (/e.g./ CSV) or in which accurate reproduction of the data with its limitations is paramount.  Believe it or not, there are good reasons to believe that some of the NHS is still running on the original binary Excel format, and not the new-fangled XML-based one.
+
+Calligra spreadsheets offer less for scientists (unless like me, they refused to use something like Python, until eventually succumbing to the dark side and enjoying the biscuits), it offers less for accountants than even the most basic home-baked system, and because Macros can be problematic, I don't exactly feel that I'm missing out on much by not using spreadsheets.
+
+The one application that will not go away and that will likely remain useful for as long as we exist, is the presentation package.  The issue is that everyone already knows how to use powerpoint, and presentations made with it or its numerous templates don't stand out, but rather blend in.  And a lot of the time, despite its many drawbacks, the Mac OS presentation software produces vastly superior output.
+
+Presentations are where there is ample opportunity to get creative, and to stand out.  Support for shaders would have been nice.  Standard representation formats, with standard animations is precisely what QML is good at.  And more importantly, it would allow the presenter to create an ever-evolving template and visual style.  Alas, while only some of it is possible with LibreOffice, the remedial capabilities of Calligra Stage are overshadowed at every step.  The program is simply too simple to be useful.
+
+And this is the best case scenario for Open Source office suites.  Often one either presents a non-interactive PDF, or presents from their own device[fn:1].  In these cases, surely running Calligra Stage would give you an edge, or at least wouldn't put one at a significant disadvantage? Well, sadly...
+
+
+**** Lesson 12:
+
+Or just kill it with fire.
+
+I'd argue that it is indeed interesting to ponder why some technologies are languishing in a limbo of being not quite irrelevant enough to be a non-issue, and yet still having so much disinterest that they would never reach a state of being useful.
+
+
+** LaTex, iPython, Inkscape
+And at this point, the bigger question is why hasn't KDE embraced the approach to standard document formats that have Open Source implementations and a wide usage.  And indeed, why not embrace the fact that most of the time, if the person isn't already using Google Docs (as a fits all bucket for formatted text), or Microsoft Office (because they have to, because it's an institutional policy), they might be using something like LaTeX, or =typst=, or ConTeXt.
+
+And indeed, there's =kile= which, if marketted correctly, could easily beat Microsoft Word in terms of its capabilities.  It is not exactly WYSIWYG, and it isn't nearly as welcoming as MS Word, which is a great shame.  With enough elbow grease, however, it can become something greater than the sum of its parts.  The reason I still think that it needs elbow grease has to do with the fact that while I myself feel comfortable writing LaTeX, I don't think that many other people are.  And on that note, the people that do write LaTeX for a living (scientists, for example) rely on Overleaf to serve as a facsimile of Google Docs.
+
+Overleaf offers collaborative editing capabilities, and cloud storage with a pre-configured LaTeX distribution.  Of these problems, Kile maybe solves the issue of installing LaTeX locally, which due to the way that LaTeX works is tens of Gigabytes of mostly useless junk that /might/ be useful some day.
+
+And in principle, Kile is a superfluous program, it doesn't need to exist, in any right world it'd be a plugin for Kate.  It doesn't offer anything that a decent tiling window manager, Okular, Konsole and Kate couldn't do or do better.  It doesn't even offer a rudimentary terribly WYSIWYG as Overleaf does.
+
+And overleaf is the bare minimum.  I cannot fathom working on my research paper in Kile, given how much AucTex, RefTex, Git and CDLaTeX save me in terms of hassle.  And if I really needed to do online collaborative editing with someone who was using a similar technology, I would use `crdt.el`.  Your specialised program should not be overshadowed by a text editor maintained by a bunch of weirdos like me.
+
+If we're completely honest, program like Lyx are a step in the right direction, but they languish in not having support and honestly not having enough to justify continued development.  Too much coupling, too little freedom.  Lyx could help, if it provided a library on which people could experiment with creating their own GUI.  But that is kinda the problem.  The reason Kile exists, is because the problem is naturally factored into =pdflatex= that handles compilation and =konsole= ensuring interaction.  Some knowledge and some rendering for commonly used symbols.  Okular to display the document and Kate to render the code and edit it efficiently.  If Lyx were to factor the problem into re-usable components, it would survive.  Sadly, it doesn't.  It's a take-it-or-leave it program that uses some Qt libraries but doesn't show any interest in integrating with KDE.
+
+Cantor is a different story.  Most of today's science is done in a literate programming environment.  Unlike =org= which provides a decent DSL for that, the most common format for exchanging such developments are based around something known as =jupyter_notebook=.  Cantor provides an alternative that renders notebooks in a native GUI, with possibly better integration and more introspection.  It is easier for one to debug (in the sense of knowing the internal state of the Python interpreter), the notebook via Cantor.  However this program is hopelessly obtuse, most people wouldn't look twice at it.
+
+LabPlot might be a useful program for some aspiring scientists, but when I needed to create a library for producing posterior plots, extending LabPlot didn't seem to be feasible.  The KDE programs don't provide the back-end elbow grease and require quite a commitment from the only people that can benefit those projects.  It's difficult to make an application that is using Qt to integrate with KDE, and much less so well.  Not least of which, because of the technical debt that these projects only seem to accumulate.
+
+So what can I say about Karbon[fn:2].  It is a decent application.  It offers a way to edit SVGs that isn't hopelessly laggy (=inkscape=), but it doesn't exactly let me do things to the same extent to be extant in the graphic design world.  Make no mistake a talented graphic designer would be able to squeeze out some use out of Karbon, but most talented graphic designers are too smart to squander their time on sub-par tools.  It needs a lot more time in the oven, for it to be competitive with better tools.  I would even go so far, as to say that it might benefit from being Audacitied-ed.
+
+So where does that leave *us*, technical people that run Linux on the daily, not despite, but because of the learning curve, and the benefits that are being offered by customisation? Well, KDE software doesn't seem to add much, despite having great potential.
+
+SVG editing ought to be a visual ordeal, but if I needed to fix some vector graphics (/e.g./ a plot) I would probably do so in Python first.  Would I bother with Kile given the existence of Vim, Emacs, TextMate, VSchrap or Kate? Probably not, these editors are competent enough to accomplish the tasks well, without any support.
+
+If I needed a GUI for Python, would I bother with Cantor? Maybe, but I have to make a conscious effort to do that.
+
+Would I use LabPlot for a scientific plot? The issue is that as a technical person, I'm /expected/ to be able to extend =matplotlib= to plot exotic plots based on data that needs to be processed.  It's difficult to do that in LabPlot.
+
+**** Lesson 13:
+
+Either assume technical competence and complement the existing tools (like Lyx), or at least ensure that the tool is useful for entry-level users.
+
+** Ktorrent
+
+I would say that this program needs more love.  Either someone should just copy over the features of QBittorrent, or at least make it extensible, so that I /could/ if I needed to download media sequentially and with the first and last pieces first, currently I cannot.
+
+Incidentally, if KTorrent had support for plugins it would have been an excellent platform, the fact that the program hasn't been updated in the sense of being majorly refactored, is a benefit, if what it means is that older plugins can still work, and work well.
+
+**** Lesson 14:
+
+Add a plugin system if you don't plan to fix it yourself.
+
+** Kmail and Merkuro
+
+This is a program that I have personally struggled with and will continue to struggle with for a very long time.
+
+Why is this program challenging to use? It's too involved.  Yeah, I know what an =imap= server is, and what an SMTP protocol is.  Why do I need to configure them separately? Why does there need to be this silly situation of not being able to just send emails by choosing from a drop-down box of identities.  Yeah, there are edge case mail  servers for which this isn't true.  Don't cater to the /fucking edge case/!
+
+The program very routinely breaks, it suffers from problems when connecting to both a Microsoft Exchange email server[fn:3], gmail and for some reason the one place you'd think it'd shine, a plain old IMAP + SMTP server with no bells and whistles is also where it almost never delivers.  I constantly have doubts about whether or not my email will come from the right address with the right signature.  And I don't mean a Cyrilic or Armenian signature to an English-speaking recipient, I mean a GPG signature from an email account that I don't want to expose to the other people.
+
+So why the fuck do I put up with this bullshit? I don't know, honestly, but it probably has to do with the way the UI is designed.  Sure there are significant headaches associated to how KMail is configured.  But when it works, it gives you a snazzy, threaded view with icons that indicate different things.  Thunderbird is tied in terms of capability.  KMail runs in the background, so I can technically not worry about having it running in the foreground.
+
+I will mention that it is somewhat problematic to achieve the same results with my otherwise favourite tool -- Emacs.  You just can't beat a purpose-built application that leverages a native toolkit and was optimised for performance.  In all fairness, simplification is the /modus operandi/ with its successor, Merkuro, that I can't even run with a =.desktop= on an Arch Linux machine, because it doesn't seem to have the full confidence of the people that designed it.  Worse yet, the backend of the system, is the problem.  There is very little for me to expect a completely rewritten backend architecture, and despite major strides in the common-case configuration, the way in which the abstractions are factored is fundamentally broken.  Merkuro, unless it takes an inordinate amount of responsibility and actually redesigns the backend is liable to be a dumber  version of KMail, plagued with the same problems, and having few if any of the positives, including the mail filters.
+
+And this isn't rocket science.  Apple Mail has existed in its present form for the past decade, with few if any changes, yet it offers very similar UI convenience with none of the fuss.  Given that emails are the most widely used form of communication, ubiquitous, unchanging, open and largely standardised, how the /bloody hell/ do we still have these early teething issues in a program that has been the exact same since I was a university student.
+
+**** Lesson 15:
+
+Don't rewrite it for the sake of rewriting.
+
+** Browsers
+
+This is perhaps a needlessly painful point, and I have no idea why this happened the way it happened and didn't happen any other way.
+
+We have many browser front ends, one back end, and mostly no agreement on why this terrible state of affairs erupted on the scene.  Probably because the Web is a hodgepodge of barely standard code.  Perhaps because the early web had decided to eschew the Unix approach for things and directly embed a JavaScript interpreter into the browser and couple it tightly to the layout engine.
+
+That is beside the point.  Currently, Falkon is the closest thing to an official KDE browser.  It has a plugin system, but no clear way of writing one, and even simple things as integrating KeePassXC into it seem to be problematic.  It is untenable, and while I would agree that writing a browser from the ground up would be too much hassle, I don't want people to do that.  Write a version of QuteBrowser that doesn't rely on modal editing[fn:4].  It's just that even Falkon to a large extent feels out of place on KDE.  It doesn't feel the same way /e.g./  Elisa or KTorrent feel, and isn't certainly nearly as polished as Kate or Dolphin.
+
+I wish we had a revival of konqueror, because the idea of a single purpose application that can render both file systems and browse the web is ideal.  The main issue is that I now believe that it would be taken to mean to write a file manager in Electron.
+
+**** Lesson 16:
+
+I don't even know what to say.
+
+** Dolphin
+
+I want to round off this section with a discussion of an example of almost all of the lessons applied.  Dolphin is a remarkable application that brings many of the things that make KDE -- KDE, to the forefront and can be considered by many to be KDEs killer app.
+
+Dolphin is a file manager that fundamentally understands that you want to manage files.  It's not quite the swiss army knife that konqueror used to be but that is for the better.  Konqueror would have been a mediocre browser and trying to make it passable would have pulled resources away from making it a good file manager.  And there's a lot to Dolphin.
+
+Want to have a UI that resembles YouTube with local videos, you can do it, just crank up the preview sizes.  Want to make things as clear as a table, sure, there's that view too.  OK, how about features that other file managers don't have? Well, Dolphin and Finder are to my knowledge the only two that also preserve the settings on a per-directory basis.  Certainly the GTK file managers could do the same, but we don't assign credit based on hypotheticals.
+
+Then there's grouping and sorting.  Far and away the best feature of Dolphin, that I believe could be made even better.  Search is wonderful, especially given that it's indexed search.  Network is not ideal, but it isn't terrible either.  The one place I would give Dolphin a negative assessment is its support for APFS devices and thus synching to IOS, but that is neither here nor there.  GVFS is a gnome-only technology and there hasn't been a Qt reimplementation for a decade.
+
+Dolphin thoughtfully includes multiple rename, it reads tags for you, and it allows you to both use it as a multi-window application as well as a so-called double-decker.  I don't have a `konsole` hotkey in KDE, because I often use Dolphin as a front-end for Konsole that allows me to avoid having to write =ls= half the time.
+
+Anything else? Well, it acts as a decent Git front-end especially if you have configured both GPG and SSH to use the secret service.  It lets you edit files as root, compress and decompress archives, copied a piece of text off the internet, fine paste it in and give it a name.
+
+Oh and did I mention that it can use tags? That's a feature that can save people a lot of headache, as anyone who has used tags on Mac OS can attest to.
+
+This is a program that I wish all KDE programs were similar to.  In some ways some of them are already like =Dolphin=, but a lot of them require a bit more work.
+
+* Final thoughts
+
+KDE plasma 6 seems like a solid release.  The project shows some promising programs in its tool-belt, and it will be popular.  However, I think that this is an interim state that can result in one of two things.
+
+KDE can make use of a resurgence in popularity to capture more mindshare and make good use of the semi-official endorsement from Valve.  It is an excellent time to regroup and to reconsider.   Many of the projects hitherto criticised are already on their last legs and are prime material to be retired.  Others, not unlike Kate, and Konsole and chat applications only need to be polished in a straightforward fashion.
+
+What I would probably not want to see is an eruption in new projects.  KDE has done a decent job in consolidating official applications under a separate banner to unofficial ones.  As such, it might be better to further segregate these applications so that users are clear as to which programs are being actively worked on, and which are just mostly along for the ride.  The main issue is that many applications that leverage Qt to great effect have no desire of integrating with KDE libraries from which they would greatly benefit.  Qbittorrent could use a better UI for installing plugins.  Configuring hotkeys is equally something that could use being standardised.  The main issue is that it's not as simple as just adding another library, the program has to be built from the ground up the KDE way, and no offence, but it's easier to build a pure Qt application and grow that, rather than build a KDE application after a Qt application was already made.  It doesn't, for example, involve a whole lot of rewriting and porting.
+
+I think we need to give KDE a round of appreciation and give it an opportunity to blossom into a UI paradigm.  
+
+
+* Footnotes
+[fn:4]: The reason it's a problem, is because modal editing is often hijacked by the JavaScript on the page, making it impossible to navigate a page that is partially loaded, without the system messing things up.
+
+[fn:3]: Cambridge uses that for some reason.
+
+[fn:2]: Which was somewhat omitted from the previous section, for reasons of it actually being based around a useful format
+
+[fn:1]: There are some rare occasions wherein some conferences require presentations to be submitted in a custom format, but I've yet to see that be nearly to the same extent to which complaints go from department to department about a form that doesn't look right or  "because Kevin from IT said that Libre Office was better, and now this form looks all wonky".
