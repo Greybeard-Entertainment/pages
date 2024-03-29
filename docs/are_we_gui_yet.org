@@ -16,36 +16,36 @@ difficult for you.
   error: failed to run custom build command for `universal_config_gui v0.1.0 (/home/app/Git/universal_config_gui)`
 
   Caused by:
-    process didn't exit successfully: `/home/app/Git/universal_config_gui/target/debug/build/universal_config_gui-a52f0ab31450bbcd/build-script-build` (exit status: 101)
-    --- stdout
-    cargo:rerun-if-changed=src/cxxqt_object.rs
-    cargo:rerun-if-changed=qml/qml.qrc
-    cargo:rustc-link-arg=-fuse-ld=lld
-    cargo:rerun-if-env-changed=QMAKE
-    cargo:rerun-if-env-changed=QT_VERSION_MAJOR
-    cargo:rustc-link-search=/usr/lib
-    cargo:rustc-link-lib=Qt6Core
-    cargo:rustc-link-lib=Qt6Network
-    cargo:rustc-link-search=/usr/lib
-    cargo:rustc-link-lib=Qt6Core
-    cargo:rustc-link-lib=Qt6Qml
-    cargo:rustc-link-search=/usr/lib
-    cargo:rustc-link-lib=Qt6Network
-    cargo:rustc-link-search=/usr/lib
-    cargo:rustc-link-lib=Qt6Core
-    cargo:rustc-link-lib=Qt6Gui
-    cargo:rustc-link-search=/usr/lib
-    cargo:rustc-link-lib=Qt6Core
-    cargo:rustc-link-search=/usr/lib
-    cargo:rustc-link-lib=GLX
-    cargo:rustc-link-search=/usr/lib
-    cargo:rustc-link-lib=OpenGL
-    cargo:rerun-if-changed=/home/app/Git/universal_config_gui/src/cxxqt_object.rs
+	process didn't exit successfully: `/home/app/Git/universal_config_gui/target/debug/build/universal_config_gui-a52f0ab31450bbcd/build-script-build` (exit status: 101)
+	--- stdout
+	cargo:rerun-if-changed=src/cxxqt_object.rs
+	cargo:rerun-if-changed=qml/qml.qrc
+	cargo:rustc-link-arg=-fuse-ld=lld
+	cargo:rerun-if-env-changed=QMAKE
+	cargo:rerun-if-env-changed=QT_VERSION_MAJOR
+	cargo:rustc-link-search=/usr/lib
+	cargo:rustc-link-lib=Qt6Core
+	cargo:rustc-link-lib=Qt6Network
+	cargo:rustc-link-search=/usr/lib
+	cargo:rustc-link-lib=Qt6Core
+	cargo:rustc-link-lib=Qt6Qml
+	cargo:rustc-link-search=/usr/lib
+	cargo:rustc-link-lib=Qt6Network
+	cargo:rustc-link-search=/usr/lib
+	cargo:rustc-link-lib=Qt6Core
+	cargo:rustc-link-lib=Qt6Gui
+	cargo:rustc-link-search=/usr/lib
+	cargo:rustc-link-lib=Qt6Core
+	cargo:rustc-link-search=/usr/lib
+	cargo:rustc-link-lib=GLX
+	cargo:rustc-link-search=/usr/lib
+	cargo:rustc-link-lib=OpenGL
+	cargo:rerun-if-changed=/home/app/Git/universal_config_gui/src/cxxqt_object.rs
 
-    --- stderr
-    thread 'main' panicked at /home/app/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cxx-qt-gen-0.5.3/src/syntax/qtfile.rs:44:57:
-    Could not read path {} to string: Os { code: 2, kind: NotFound, message: "No such file or directory" }
-    note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+	--- stderr
+	thread 'main' panicked at /home/app/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cxx-qt-gen-0.5.3/src/syntax/qtfile.rs:44:57:
+	Could not read path {} to string: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+	note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
   warning: build failed, waiting for other jobs to finish...
   #+END_SRC
 
@@ -64,21 +64,21 @@ difficult for you.
   Example,
 
   #+BEGIN_SRC rust
-    fn main() {
-	    // Create the application and engine
-	    let mut app = QGuiApplication::new();
-	    let mut engine = QQmlApplicationEngine::new();
+	fn main() {
+		// Create the application and engine
+		let mut app = QGuiApplication::new();
+		let mut engine = QQmlApplicationEngine::new();
 
-	    // Load the QML path into the engine
-	    if let Some(engine) = engine.as_mut() {
-		    engine.load(&QUrl::from("qrc:/main.qml"));
-	    }
+		// Load the QML path into the engine
+		if let Some(engine) = engine.as_mut() {
+			engine.load(&QUrl::from("qrc:/main.qml"));
+		}
 
-	    // Start the app
-	    if let Some(app) = app.as_mut() {
-		    app.exec();
-	    }
-    }
+		// Start the app
+		if let Some(app) = app.as_mut() {
+			app.exec();
+		}
+	}
   #+END_SRC
 
   Engine returns an =Option= which is idiomatic Rust.  Not my preferred style,
@@ -117,8 +117,8 @@ difficult for you.
 
   One area I'll give Rust an advantage, is that idiomatic Rust is much more
   prone to attribute macros: so code like this is not out of the ordinary:
-  #+BEGIN_SRC rust 
-    #[cxx_qt::bridge] mod my_object {
+  #+BEGIN_SRC rust
+	#[cxx_qt::bridge] mod my_object {
 	#[cxx_qt::qobject(qml_uri = "demo", qml_version = "1.0")]
 	#[derive(Default)]
 	pub struct Hello {}
@@ -170,7 +170,7 @@ difficult for you.
 
 * Iced
   This is raw.  But it is a forward-looking time investment.  At the very least
-  it is actively developed and statically linked.  
+  it is actively developed and statically linked.
 
   Let me explain why those two points are extremely important.  Firstly, and
   most importantly, there's no issue of outdated system libraries. Yes, you're
@@ -186,13 +186,13 @@ difficult for you.
   it is not even not standard C++ it is not even the latest standard /of/ C++
   that is, for lack of a better word, shoved down our throats. This is for lack
   of a better term, a problem. I don't know if it's going to be a good idea to
-  do that.  
+  do that.
 
   This is an interesting technology that is somewhat risky to invest into.
   There used to be =orbtk= that went almost completely extinct in a span of two
   years. GTK and Qt make for better investments in terms of reliability, but
   they can be (well for lack of a better term) the dinosaurs of yesteryear in a
-  couple of years. 
+  couple of years.
 
   Make no mistake, I do think that Qt is the superior toolkit in terms of time
   investment and end result. The problem is that Qt is a little too tightly
@@ -205,8 +205,8 @@ difficult for you.
   Emacs, and long before then to Java. The main issue is the mindshare. There
   was nothing particularly wrong with COBOL, especially in the area for which
   it was developed.  Nonetheless, popular opinion made it go down under and
-  eventually disappear. 
+  eventually disappear.
 
   While =iced= is a worse investment at this time, it has made some decisions
   in precisely the way it needed to, to ensure that it will be a better
-  investment in the medium term. Long-term? Time will tell. 
+  investment in the medium term. Long-term? Time will tell.
