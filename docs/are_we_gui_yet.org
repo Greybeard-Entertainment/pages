@@ -8,7 +8,7 @@ This is a tiny discussion of why if you're writing your GUI in Rust, life is dif
 
   It has problems.
 
-  Have to fuck around with the build system.
+  You, yes you, Have to fuck around with the build system.  It's not abstracted into =cargo=. It's just something that you have.
 
 
   #+BEGIN_SRC console
@@ -48,12 +48,13 @@ This is a tiny discussion of why if you're writing your GUI in Rust, life is dif
   warning: build failed, waiting for other jobs to finish...
   #+END_SRC
 
-  Where in this error message can you find mention of either the missing file:  =cxxqt_object.rs=, or the file that was actually present but wasn't supposed  to be: =q_object.rs=.   Why bother with Rust at this point, if you're going  to get shitty Qt library feedback might as well remove the extra layer of indirection
+  Where in this error message can you find mention of either the missing file:  =cxxqt_object.rs=, or the file that was actually present but wasn't supposed  to be: =q_object.rs=.  This is kind of awkward isn't it?  I'll be a bit more forward here.  You should not be under the impression that moving to Rust is magically going to give you better error messages.  In fact, packages like =serde= are known for producing extremely difficult-to-decode error messages.  And the QML bindings are no different.
 
-  Have to fuck around with the Qt abstractions rather than circumvent them in a Rust-idiomatic way.
+Why bother with Rust at this point, if you're going  to get shitty Qt library feedback might as well remove the extra layer of indirection
 
-  Error handling.  Every function is both potentially fallible and never
-  leaving you with any option to handle the error.
+  First of all, you, yes you, have to fuck around with the Qt abstractions rather than circumvent them in a Rust-idiomatic way.  No, you don't get an =Option=. You get a =QVariant=.
+
+  Error handling is not easier.  In fact, because Rust tends to solve problems in a different way: by having an explicit value returned and discouraging panics, it's a lot harder to do here.  Every function is both potentially fallible and never leaving you with any option to handle the error.
 
   Example,
 
@@ -77,19 +78,21 @@ This is a tiny discussion of why if you're writing your GUI in Rust, life is dif
 
   Engine returns an =Option= which is idiomatic Rust.  Not my preferred style,  but I can forgive that.
 
-  In Rust all lines that can fail, do so in one of two ways: either a panic, which can be controlled, but usually results in a traceback and termination, or by forwarding a =Result=.  Guess which of these does =engine.load= do? Well, it locks up the process, and prints a message that it couldn't find the file in the =qrc=.
+  In Rust all lines that can fail, do so in one of two ways: either a panic, which can be controlled, but usually results in a trace back and termination, or by forwarding a =Result=.  Guess which of these does =engine.load= do? Well, it locks up the process, and prints a message that it couldn't find the file in the =qrc=.
 
   Now I've done this before, so I know what was missing.  But imagine that I didn't.  What, in your error message indicates what I need to do?
 
   Second problem is in the form of =app.exec=.  This is a blocking call.  More importantly this is a blocking call that /must/ live on the main thread.  Do you know what this means?  Exactly, it means that if you try and use =tokio= with this thing, you are going to find your life miserable.  See above.
 
-  But to be quite honest, these things are problematic, but can be chalked up to a skill issue.  WHat about the potential productivity?
+  But to be quite honest, these things are problematic, but can be chalked up to a skill issue.  What about the potential productivity?
 
-  Well, again, I would argue that exposing your Rust code via =extern "C"= is likely going to be more productive.  Inheritance, the C++ macros are implicit, shall we say...  baked into Qt.  It cannot exist without those features existing in other languages.
+  Well, again, I would argue that exposing your Rust code via =extern "C"= is likely going to be more productive.  While it is possible to link against C++, the fact that Qt has a different convention to Rust, and is one of many supported by C++, error handling, build systems, ...  hell, even handling regular inheritance of objects in Qt is just too much of a hassle.  It looks like you're writing Rust, but it increasingly looks like C++.
 
   And that's the key problem.
 
-  I get almost none of the benefits of Rust, because of the exposure to Qt. There's no way of combining the two APIs.  There's no way to circumvent the meta-object-compiler, and Rust is compiled to something that has all of the features of a C++ class.  Just use C++ then.  C++ isn't that terrible, and it would give you a much better range of documentation.  In Rust, you'd be lucky to find a tutorial.
+  I get almost none of the benefits of Rust, because of the exposure to Qt. There's no way of combining the two APIs.  There's no way to circumvent the meta-object-compiler, and Rust is compiled to something that has all of the features of a C++ class.
+
+  And why not use C++ at this point? C++ isn't that terrible, not objectively, and it would give you a much better range of documentation.  In Rust, you'd be lucky to find a tutorial.
 
   One area I'll give Rust an advantage, is that idiomatic Rust is much more prone to attribute macros: so code like this is not out of the ordinary:
   #+BEGIN_SRC rust
@@ -107,11 +110,11 @@ This is a tiny discussion of why if you're writing your GUI in Rust, life is dif
   }
   #+END_SRC
 
-  What is out of the ordinary, is that this object needs to be registered in the =build.rs= "script".  This is, for lack of a better word, not a footgun. Much worse than that, it is a crotch gun, with extra hot rounds, and a hair trigger.
+  What is out of the ordinary, is that this object needs to be registered in the =build.rs= "script".  This is, for lack of a better word, not a foot-gun. Much worse than that, it is a crotch gun, with extra hot rounds, and a hair trigger.
 
   I can see this being improved in later iterations, but I don't think that it is wise to depend on these either directly, using either =PySide= or proper C++, or to not engage with Qt at all.
 
-  Alas, because I had already tried to implement a parser in C++, so I will try and take the second approach.  I still think that contributing to the C++ ecosystem via Qt applications using the native C++ is probably something I'll  keep doing.  However, I will do so as part of pre-existing KDE projects, not by creating a new project.
+  Alas, because I had already tried to implement a parser in C++, so I will try and take the second approach.  I still think that contributing to the C++ ecosystem via Qt applications using the native C++ is probably something I'll  keep doing.  However, I will do so as part of preexisting KDE projects, not by creating a new project.
 
 * GTK on Relm4
 
@@ -119,9 +122,10 @@ This is a tiny discussion of why if you're writing your GUI in Rust, life is dif
 
   It's possible to do that.  But I sincerely doubt it'd be a useful use of my  time.  Generating an ad-hoc component requires a "factory", (which is a sign of abstraction creep).
 
-  Plain GTK4 is a problematic library.  For one simple reason.  The library breaks, and it requires dynamic linkage.  As such, this results in the program being potentially unmaintainable, if one does not wish to spend an inordinate amount of time fixing problems on platforms they don't even have.
 
-  One way to fix it is to do static linkage.  The other way is to package into a reproducible format (/e.g./ =nix=, or =guix=).  Finally as a last resort, one can package the problem into slightly (and only slightly) less defective packaging standards, snaps and flatpaks.
+  GTK is itself not a terrible library, but it is difficult to maintain if not antithetical to the Rust way of doing things.  There are reasons to use a specific version of Rust libraries.  And there are reasons to choose specific versions of GTK.  Unfortunately the only version of GTK that is available is the one that came preinstalled with the particular distribution.  This problem is more apparent with GTK than it is with Qt, because arguably, the Qt company has gone to great lengths to ensure that the libraries remain ABI stable.  Given that Rust prefers static linkage, and GTK is linked primarily dynamically and is infamous for making frivolous changes to its API (much less ABI), we end up with a conundrum of exponential explosion of requirements.
+
+  One way to fix it is to do static linkage.  The other way is to package into a reproducible format (/e.g./ =nix=, or =guix=).  Finally as a last resort, one can package the problem into slightly (and only slightly) less defective packaging standards, snaps and flatpaks which can reasonably be argued to be minor upgrades to =deb= and =rpm= respectively[fn:1].
 
 
 * Iced
@@ -133,6 +137,10 @@ This is a tiny discussion of why if you're writing your GUI in Rust, life is dif
 
   This is an interesting technology that is somewhat risky to invest into.  There used to be =orbtk= that went almost completely extinct in a span of two years. GTK and Qt make for better investments in terms of reliability, but they can be (well for lack of a better term) the dinosaurs of yesteryear in a couple of years.
 
-  Make no mistake, I do think that Qt is the superior toolkit in terms of time investment and end result. The problem is that Qt is a little too tightly coupled to C++. Rust still has a long road ahead of it. It's not a new language by any means, but it will be around for a long while, thanks to it being accepted into the Linux kernel, C++ has been around and while it made major strides in the recent years to become more modern, it's both a benefit and a drawback. This is enough change to polarise the community, and not enough change to entice new users. Believe me, I know, I've this happen to Emacs, and long before then to Java. The main issue is the mindshare. There was nothing particularly wrong with COBOL, especially in the area for which it was developed.  Nonetheless, popular opinion made it go down under and eventually disappear.
+  Make no mistake, I do think that Qt is the superior toolkit in terms of time investment and end result. The problem is that Qt is a little too tightly coupled to C++. Rust still has a long road ahead of it. It's not a new language by any means, but it will be around for a long while, thanks to it being accepted into the Linux kernel, C++ has been around and while it made major strides in the recent years to become more modern, it's both a benefit and a drawback. This is enough change to polarise the community, and not enough change to entice new users. Believe me, I know, I've this happen to Emacs, and long before then to Java. The main issue is the mind-share. There was nothing particularly wrong with COBOL, especially in the area for which it was developed.  Nonetheless, popular opinion made it go down under and eventually disappear.
 
   While =iced= is a worse investment at this time, it has made some decisions in precisely the way it needed to, to ensure that it will be a better investment in the medium term. Long-term? Time will tell.
+
+* Footnotes
+
+[fn:1] To anyone who would like to presuppose that these packaging standards are either obviously, or majorly better than =deb= and =rpm=, I would invite them to install a Flatpak version of =steam=.
