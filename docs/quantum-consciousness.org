@@ -140,9 +140,29 @@ This is a very subtle distinction between identifying Quantum mechanics as a way
 
 Remember what I told you earlier about the correspondence principle.  All outwards appearances are classical.  One cannot interrogate the quantum state.  But one can, and does obtain the classical statistics as a limit.  It is not fundamentally required for some super-radiance to take place inside the cells, because the sheer fact that there are atoms is itself a quantum effect.  As such, we obtain something that could, if we relax the other requirements and supposed properties, work.  This is not entirely a theory, because it doesn't precisely define how things should operate, nor what is required for qualia to be organised at one particular level or another...  but that is beside the point.  It is a starting point.  Many theories started in things far disjointed and disconnected with hypotheses that have no basis in reality, until some aspects of that theory prove useful, get refined and redefined further.
 
-One does not think that the road to quantum mechanics began with the discovery of wave optics, but it is, in fact, the earliest manifestation of quantum mechanics that we didn't know we needed to attribute to that theory.  I have a similar belief that much like many early steps the hypothesis that Penrose proposed is likely flawed; almost all theories including our modern take on quantum mechanics are.  But it is a useful starting point to discuss these things.  It is a thread that could be followed to its logical conclusion and largely result in a productive debate.  
+One does not think that the road to quantum mechanics began with the discovery of wave optics, but it is, in fact, the earliest manifestation of quantum mechanics that we didn't know we needed to attribute to that theory.  I have a similar belief that much like many early steps the hypothesis that Penrose proposed is likely flawed; almost all theories including our modern take on quantum mechanics are.  But it is a useful starting point to discuss these things.  It is a thread that could be followed to its logical conclusion and largely result in a productive debate.
+
+** Epilogue, Josephson's starlings
+
+Before I finish this article I should perhaps consider an important note of thanks.  Usually those are put at the beginnings of articles, and I suspect that I should put this one there as well.  This entire sub-chapter is rather orthogonal but interesting to the discussion and can serve both as an effective introduction and conclusion.
+
+There is one person whom I need to thank personally, and that is Professor Crispin Barnes.  He is the person that rescued me from an eventual suicide both figuratively and directly.  His guidance is what inspired much of today's discussion and far more, because Quantum Mechanics is a fascinating subject.  He put my unrealistic criteria of success into perspective; his influence on my life is perhaps equivalent to that of Prof. Feynman for Stephen Wolfram.
+
+But what is more important, is that he re-framed the naïve notions of excellence and being a "good physicist" as a natural propensity that is not a property of the few chosen.  That Physics is a collaborative endeavour, is something that is often lost on the highly competitive clever students.  Physics is something that interests all, and all should be allowed to do it.  But being a good Physicist doesn't always necessarily mean thinking about problems in textbooks.  Oftentimes, just being interrogative is enough.  And moreover, humanity doesn't necessarily need as many high-energy physicists, sometimes a humble climate scientist can do a lot more good.  COVID[fn:17] had prevented me from pursuing the chosen path of an academic Physicist; but the fact that I was at peace with that notion and did not, as some might expect, sacrifice everyone and everything to pursue that pipe dream is largely Prof. Barnes' accomplishment.  I owe him a lot more than just my life.
+
+One of the great gifts that Prof. Barnes gifted me was the notion to ask Prof. Brian Josephson about his "starling experiment".  This is a valuable discussion, because it explains one important aspect of quantum mechanics that I emphasised, but didn't explain.
+
+Prof. Josephson wanted to see if the distribution of starlings had any similarity to quantum mechanical distributions.  This is very relevant in many ways, because it is both a more direct observation of the quantum nature of thought processes in avians, and a more abstract one, because the entire system might appear as one quantum mechanical system, wherein individual components might decohere, similarly to how a quantum computer can have coherence time far longer than that of a moderately sized, but differently organised collections of atoms, like /e.g./ a regular computer.  Size isn't intrinsically a problem.  And if it isn't there would be a specific set of quantum algorithms that nature would eventually be able to exploit.  At the very least the positions of starlings in flight would follow more closely a distribution generated by a wavefunction.
+
+I do not believe that me recounting the experiment, or indeed explaining its result would do it justice.  I recommend, while Prof. Josephson is alive, to give him much deserved attention.  This experiment deserves to be discussed; as someone who has received the information from him personally[fn:18], I don't believe I understand the intricacies.  Feigning understanding is far more damaging than not mentioning it.
+
+
 
 * Footnotes
+
+[fn:18] Although, I don't think he would remember me per se...  Prof. Josephson sees many students, most far more brilliant than I am.
+
+[fn:17] And undiagnosed ADHD that I, for lack of knowledge and understanding of the implications, prevented from being diagnosed.
 
 [fn:16] And that idea seems less absurd to me, than the university lecturer that taught me briefly.
 
