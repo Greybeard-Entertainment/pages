@@ -4,6 +4,8 @@
 #+LANGUAGE: en_GB
 #+OPTIONS: toc:nil
 
+** May 2024
+- [[./quantum-consciousness.org][Quantum consciousness]]
 
 ** January 2024
 - [[./linux-phone-security.org][Linux phone (in)security]]
