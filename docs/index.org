@@ -4,6 +4,10 @@
 #+LANGUAGE: en_GB
 #+OPTIONS: toc:nil
 
+** Jan 2025
+- [[./para-content.org][Paracontent]]
+- [[./normalised-madness.org][Normalised chaos]]
+
 ** May 2024
 - [[./quantum-consciousness.org][Quantum consciousness]]
 
