@@ -164,10 +164,14 @@ We have opinions that are accepted as fact based on authority.  Lesser minds hav
 
 ** Pestilence
 
-This problem lies at the heart of 
+This problem lies at the heart of all institutional issues.  It is a decided shortfall between the proclaimed efficacy and standards of an institution and the actual quality of the output.  A semblance of it is heard in the "good old days" arguments of the older generation.  But there are both more serious and more obvious issues that must addressed.
+
+On the obvious side there is infantile disilussionment in institutions whose goals had been romanticised away from their original intention.  Universities and schoools are not meant to provide useful skills, though they may do so as a side effect.  They engender conformity,  which in and of itself is a useful skill, much more so for the society than the individual, but undoubtedly a tool that /can/ be used for good.  This is not too dissimilar to the training and discipline that is engendered in the army/navy/air-force boot-camp.  The idea is not and never was to make free thinkers, but rather to acquaint free thinkers with doers, and to temper their freedom, such that it does not lead to disaster.  Realising this is a bitter pill to swallow for most graduates.  The unfortunate consequence is that this is often conflated with the very real problem of that higher academia is indeed broken, not because it no longer "creates" new free thinkers and geniuses, but rather because it fails to provide them with the requisite nurturing, and usually points them towards a more destructive path.
+
+Academia is an excellent example, both because I have personally a great deal of experience and a large toolkit of horror stories, but also because it is an important cornerstone of our society both at large and to each person individually.  
+
 
 * Footnotes
-
 [fn:5] I object to calling programmers and software engineers /developers/, but can concede to the usage, if it describes ever profession involved in making a game.
 [fn:4] by that I mean countries
 [fn:3] I'm learning how to do foreshadowing.
