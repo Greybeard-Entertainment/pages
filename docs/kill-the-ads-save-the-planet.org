@@ -14,7 +14,7 @@ Syme) from the official CyberLounge Odysee.
 :CUSTOM_ID: introduction
 :END:
 
-[[/res/img/Chris_Abney__area_covered_with_green_leafed_plants.jpg]]
+#+HTML: <img src="/res/img/Chris_Abney__area_covered_with_green_leafed_plants.jpg" alt="Image">
 
 You went down the internet privacy rabbit hole. You've got
 [[https://github.com/gorhill/uBlock/][uBlock]], you installed

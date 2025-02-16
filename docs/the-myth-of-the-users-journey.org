@@ -1,0 +1,319 @@
+#+title: The myth of the "user's journey"
+#+AUTHOR: Viktor Gridnevsky, Aleksandr Petrosyan and friends
+#+DATE: 16.02.2025
+#+LANGUAGE: en_GB
+
+* The myth of the "user's journey"
+:PROPERTIES:
+:CUSTOM_ID: the-myth-of-the-users-journey
+:END:
+Sometimes I do frontend development. As a learner I have a strange
+perspective: designers imposing their ideas on users. I believe it
+likely harms both producers and consumers in the long run, which may not
+be obvious from the get go and is worthy of a discussion.
+
+** Controlling the narrative
+:PROPERTIES:
+:CUSTOM_ID: controlling-the-narrative
+:END:
+Designers often believe they must "map the user's journey"[fn:1],
+tracking every step from "arrival to purchase". They approach it like a
+sales pitch, defending it through an appeal to popularity. The vast
+majority of the users are annoyed and disgusted with ads[fn:2], but
+accept it as a norm[fn:3]. We use adblockers pretty
+actively [fn:4] [fn:5] [fn:6] [fn:7], although I rarely hear about
+people objecting to the very idea of the ad industry continuing to
+exist. We even seem to have silently accepted the premise of ads being
+used to track us[fn:8]. The myth of the perfect user journey typically
+assumes users are clueless and need to be shown what to do. It falls
+apart when real people interact with real designs. If you think that
+way, your program will likely repel people. Many will leave, disgusted.
+
+I think we'll live in a better world if more of us blocked ads. The
+intentional use of "pattern interrupts" on low-quality ads[fn:9] reduces
+our focus while the surveillance capitalism is built around monetizing
+our data and turning it into a self-reinforcing cycle. It's almost a
+must these days, yet we are fed propaganda about how blocking ads is
+wrong[fn:10][fn:11]. It resembles a popular misdirection that blames
+regular people[fn:12] for CO₂ emissions instead of big companies and
+billionaires with their expensive cars and private jets.
+
+I recently attempted to apply for a job, and the process was anything but simple.
+I won’t lie, The frustrating user experience adds insult to the injury of an
+already exhausting struggle for employment.
+And yet, that’s just how things are in 2025. At least for me, and I apply often.
+Business as usual.
+Not sure what the experience is like? Let me walk you through it.
+At a certain point, the registration to apply opened for a limited time.
+A timer counted down to zero, then started counting up. No application form appeared.
+I sent them a video of the issue and my resume.
+Around 12:30 AM, they fixed the bug without me getting any reply.
+I opened the form. I uploaded my resume.
+The system tried to extract my photo but pulled the header's background picture
+with a plant texture instead. Now, in their system, I'm not me.
+I'm a bush, fern, to be more specific.
+I tried uploading a real photo.
+It erased my name, surname, and other details. I was either a fern with work experience
+or nothing at all. So, I tried hard to fix it and I failed.
+The problems I won't dwell on, continued. Finally, I submitted the form.
+You can call me Mr. Fern now.
+
+Here's another example. Imagine your pet dog is sick, you need to
+quickly take them to their vet. Lots of vets around but the competent
+one lives far away. Literally hours of walking, with a dog that has
+internal bleeding. Surely, in the modern day you can order a taxi, and
+simply tick a box saying "I am trasporting a pet". Happy accident, sadly
+you can't specify that it's a medium-sized breed, and so the taxi driver
+flips you off and stays in the vicinity to make you have to pay for the
+cancellation. Is the taxi driver to blame? Maybe. But I think the
+context is what drove the problem; there isn't enough expressive power
+in /what kind of pet/ is being trasported.
+
+The taxi app could fix this. It could add a simple option, letting you
+mark if you need more space than a regular car but much less than a
+delivery truck. It wouldn't just be for dogs, it could be for anything.
+You'd be happier. But instead, you're have to cater to how a shitty app
+works. The shitty app reduces the options down to a single boolean. The
+problem isn't the answer, the problem is the kind of question that the
+app asks of you.
+
+Not all cars are owned by taxi companies. People buy their own cars, big
+or small, and use taxi apps to earn extra money. A simple text field for
+comments could save both customers and drivers time and hassle on
+reordering an appropriate taxi. One person might write, "I have a
+shelf", another, "I'm with a dog", and some might not need to write
+anything at all. I've heard people talk about simplifying apps and
+cutting back on support, often pointing to Google as a successful
+example. I wonder: "Is it worth it?".
+
+I think I am not alone in my assesment, even though my conclusions on
+the design assumptions may differ. One of the popular tendencies I hear
+about nowadays are the "everything apps", for instance WeChat in China.
+The idea of seamlessly integrating multiple services, such as messaging,
+social media, payments, shopping, and more, is certainly appealing to
+me.
+
+The centralization of "everything apps" brings to mind the famous
+aphorism often attributed to Sir Francis Bacon: "knowledge is
+power"[fn:13]. People who possess relevant knowledge may be able to
+exert control and influence others. In the context of "everything apps",
+this knowledge encompasses /everything that defines you as a citizen/:
+your documents, location, bank account details, and more. The ability to
+exert large-scale control over these aspects is appealing both to
+governments and large corporations. For you, it is a single point of
+failure: a key you cannot afford to lose, a single door to your
+business, a tool that could ultimately dictate your choices, leaving you
+with no alternatives. In that context, decentralised, open protocols
+have a potential to be better than the idea of "everything apps". While
+not eliminating personal risks I just pointed with "centralised
+systems", the decentralized designs aren't inherently built to favour
+one side, gaining control simply because it can.
+
+Last week, a driver drove far past my location. I had to run half a
+kilometre to catch up. A photo of my location could have saved us both
+time. Neither did I blame this gentleman back then, nor do I blame him
+now, but I do think a feature with a location photo would help. I've
+seen this as a requirement in scooter rental apps, so why not add it to
+taxi apps?
+
+Lastly, I'd like the option to freeze a small amount of money on my card
+when I book a ride. This way, I wouldn't have to wait to confirm
+payment. If the app freezes a bit extra, it would work well, and the
+taxi company could still track the exact amount for their records.
+
+The way a user understands an idea might not match how the development
+team sees it. This difference adds complexity. Instead of assuming the
+idea of "an abstract, clueless user", we should talk with people to
+understand their needs, group them by understanding their needs, and
+make it inclusive by designing programs for everyone.
+
+** Halo effect
+:PROPERTIES:
+:CUSTOM_ID: halo-effect
+:END:
+Designers often pick bad solutions because of the
+"[[https://www.britannica.com/science/halo-effect][halo effect]]". They
+want to look good, seem effective. If something is even slightly
+associated with selling well, they push it, even on the sites that don't
+sell things. In the end, the users suffer for them to even attempt to
+look good. The users have to deal with a bad tool, as if the "a tool
+exists for the user" rule was inverted. While some publications suggest
+that aggressive marketing can increase interest in a product, and while
+the publishers may have a certain level of renown, scientific or
+otherwise, it raises the question: are these claims based on genuine
+research and experience, or are they driven by the pursuit of short-term
+profits from ads, especially given the existing systemic prioritization
+of profit-maximizing interfaces? We should ask ourselves: could
+businesses make more money by making their systems more open, instead of
+sticking to designs that pretend to sell, but are painful to the users?
+
+Some designs aren't just bad, they're sneaky. Take buttons like *"kick"*
+and *"ban"*. Putting them where they're easy to click isn't an accident,
+while the useful features are buried is something that is called a "dark
+pattern". It pushes people to act fast, without thinking. Tools for
+cutting people off are right there, front and centre. This isn't just
+poor design. It's a *plan*. It stirs up drama and conflict to keep users
+hooked. The fix isn't tweaking these choices. It's giving users control.
+Let them *set up their own interface*. Even better, move to an *open
+protocol*. That way, people can use open-source tools to interact how
+they want.
+
+** Tabs versus spaces
+:PROPERTIES:
+:CUSTOM_ID: tabs-versus-spaces
+:END:
+As we grow older, vision and hearing fade. Accessibility becomes
+essential, not optional. We shouldn't trap users in rigid designs.
+Instead, we need simple protocols and APIs for everyday tasks: forms,
+shopping, and more.
+
+The UX of code editing is discussed very often, but we don't hear about
+the accessibility for the visually impaired that often. While reviewing
+this article, Alexander added a great reference: the
+"[[https://www.reddit.com/r/javascript/comments/c8drjo/nobody_talks_about_the_real_reason_to_use_tabs/][Nobody
+talks about the real reason to use Tabs over Spaces]]" article. Its
+author, [[https://www.reddit.com/user/ChaseMoskal/][Chase Moskal]],
+recently worked at a company that used tabs for indentation. Stressing
+the need for consistency in coding environments, he started pushing for
+spaces instead. As he did it, two coworkers approached him, both are
+visually impaired. One uses a tab width of 1 because they need a very
+large font to read code. The other uses a tab width of 8 on a wide
+monitor to fit their needs. He wrote that given their vision challenges,
+it's impressive they can code at all. These choices aren't about being
+picky, they're about not doing the extra work each time due to your
+existing health condition.
+
+Businesses must balance their needs with user control. This might mean
+moving past traditional browsers and mobile apps, which only help a few.
+Most apps are inflexible. They favor fixed designs over adaptability. We
+could connect the protocols I have mentioned above to open-source
+software. This would create dynamic interfaces tailored to individual
+needs, whether it's a clean form or a text option for the visually
+impaired. RSS and Gemini prove this: cutting the ad-driven clutter makes
+technology more accessible.
+
+Businesses win when they let customers control how they interact[fn:14].
+Users win, as having more control makes things both safer and more
+convenient for them.
+
+Once, I found a useful program written in [[https://go.dev/][Go]]
+language. It showed how breaking away from a company's standard design
+can make things faster and easier. It let you order Domino[fn:15]'s
+pizza from the command line. It made me think: I don't want to see some
+shop's design. Moreover, I don't want to scroll through their news or
+product recommendations. What I want is pizza. I can, in a few minutes,
+create a physical button in your kitchen: one press, and it orders your
+usual pizza. A desktop shortcut that does the same, if you prefer that.
+
+*** Ownership
+:PROPERTIES:
+:CUSTOM_ID: ownership
+:END:
+I like thinking of my own tools, because understanding them makes my
+life smoother. These ideas cut out the extra steps and make ordering
+quick and simple. This helps businesses too. If my tool works exactly
+how I want, I'll order more often. Companies should make their services
+fit how customers want to use them, not force a single way[fn:16]. So
+here's to DIY pizza buttons. One for each topping. And a delivery timer.
+
+The APIs online shops make should also focus on support. Think about
+having support contacts built into an API. Right now, most support
+systems feel disconnected. They ask for extra information, require
+authentication, and create headaches. A support API would be better. I
+could use it from any app, on any device, and it would sync seamlessly.
+I don't want to be stuck with clunky support interfaces, but that's
+where we are today.
+
+After reading this article, my friend asked me to expand on a few
+points. He wanted to talk about a problem tied to aging: older people
+often don't want "design innovation". They don't care for flashy, new
+buttons. They want things to stay predictable. If a design changes too
+much, they'll likely ask younger people to help them understand it.
+Updating designs also adds costs, like translating text. Sometimes, new
+designs are launched without being adapted for different languages or
+regions. This makes the user experience even harder for them. Worse yet,
+I see "accessibility systems" integrated into shop websites, and let me
+tell you, I want none of that nonsense. Native accessibility is much
+better than having to adapt to many "accessibility designs", and I can
+say it as my vision is getting worse.
+
+Discussing this article, I was recommended Dieter Ram's "Ten Principles
+for Good Design", or "/The Design of Everyday Things/" by Don Norman,
+which I am grateful for. This article is only a starting point for a
+conversation about moving toward better, more sustainable designs. It's
+far from a finished product, and I see this as part of my own learning
+journey. Every piece of evidence, whether from literature or
+discussions, adds to this evolving exploration.
+
+In conclusion, forcing the users into rigid, profit-driven designs only
+drives us away. By focusing on user control, accessibility, and
+flexibility, businesses can stay in touch with their userbase, build
+loyalty and earn trust. A design that respects the user's needs isn't
+just morally right, it's good business. After all, happy users are
+returning users.
+
+[fn:1] As a *neutral* reference for the sake of this article, the
+       "[[https://www.youtube.com/watch?v=wIuVvCuiJhU][world's shortest
+       UI/UX design course]]" by Juxtopposed would suffice. My intention
+       isn't to criticise the Juxtopposed, who simply shows the idea of
+       "mapping".
+
+[fn:2] [[https://www.statista.com/forecasts/1452640/share-of-people-getting-annoyed-by-online-ads-in-selected-countries-worldwide][Share
+       of people getting annoyed by online ads]] in 53 countries &
+       territories worldwide, as of January 2025
+
+[fn:3] [[https://www.statista.com/forecasts/997054/attitudes-towards-online-advertising-in-the-us][Attitudes
+       towards online advertising in the U.S.]] as of December 2024.
+       Personally, though, I think "I am often annoyed by advertising on
+       the Internet" as the "highest category" limits the picture, as
+       there are people taking an active stance against the ads.
+
+[fn:4] [[https://blockthrough.com/blog/2022-pagefair-adblock-report/][2022
+       PageFair Adblock Report]] shows that at least 290M people monthly
+       use ad blockers globally
+
+[fn:5] [[https://today.yougov.com/politics/articles/16318-why-people-use-ad-blockers][Annoying
+       ads]]: Just one of the many reasons why people use ad blockers
+
+[fn:6] [[https://www.gwi.com/hubfs/Downloads/Global_Ad-Blocking_Behavior.pdf][Global
+       Ad-Blocking Behavior]] (2019)
+
+[fn:7] [[https://www.forbes.com/sites/tjmccue/2019/03/19/47-percent-of-consumers-are-blocking-ads/][47
+       Percent Of Consumers Are Blocking Ads]]
+
+[fn:8] [[https://timsh.org/tracking-myself-down-through-in-app-ads/][Everyone
+       knows your location]]: tracking myself down through in-app ads
+
+[fn:9] Reddit: "Can someone please explain
+       [[https://www.reddit.com/r/advertising/comments/joyg4e/comment/gbc2tx9/][why
+       there are so many poorly designed and frequent ads]] on
+       websites?" --- look no further than James Steadman (jcsteadman)'s
+       reply
+
+[fn:10] For an example calling blocking ads "piracy", look no further
+        than "[[https://www.youtube.com/watch?v=a-PH2GUy_zM][Is Adblock
+        Piracy?]]" by Linus Sebastian
+
+[fn:11] Louis Rossmann provides a number of arguments against "ads as
+        piracy"[^Linus_ads] in
+        "[[https://www.youtube.com/watch?v=6jUxOnoWsFU][Linus says
+        adblock is piracy: is he right?]]"
+
+[fn:12] There's a relevant conversation of how the ecological
+        responsibilities are represented in
+        "[[https://youtu.be/uCuy1DaQzWI?t=5498][Kurzgesagt and the art
+        of climate greenwashing]]" and
+        "[[https://www.youtube.com/watch?v=DGfBV4I8DQI][Kurzgesagt:
+        billionaire propaganda, trusting science, and effective
+        altruism]]"
+
+[fn:13] Or, originally, "scientia potentia est"
+
+[fn:14] I was told a story about Gaudi allowing the workers to decorate
+        the wall and winning from it, but I am yet to find some link to
+        the story. Please contact me if you have one.
+
+[fn:15] Who I really am grateful to for presenting such an API
+
+[fn:16] My friend still uses Windows XP in 2025, and I quote here "out
+        of sheer disgust towards the newer designs".
