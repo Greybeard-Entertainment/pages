@@ -4,6 +4,12 @@
 #+LANGUAGE: en_GB
 #+OPTIONS: toc:nil
 
+** Feb 2025
+
+- Tri-eulogy: [[./the-myth-of-the-users-journey.org][The myth of the “user’s journey”]]
+- Tri-eulogy: Product thinking (TBD, still cleaning up the text)
+- Tri-eulogy: [[./brittle-supply-chains.org][Brittle Supply Chains]] (TBD, currently collecting comments)
+
 ** Jan 2025
 - [[./para-content.org][Paracontent]]
 - [[./normalised-madness.org][Normalised chaos]]

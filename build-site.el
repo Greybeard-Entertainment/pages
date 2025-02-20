@@ -28,12 +28,21 @@
 			 :email "ap886@cantab.ac.uk"
 			 :html5-fancy t
 			 :with-email t
-			 :auto-sitemap t)))
+			 :auto-sitemap t)
+       (list "my-org-site-static"
+             :recursive t
+             :base-directory "./res"
+             :base-extension "png\\|jpg\\|jpeg\\|gif\\|svg\\|webp"
+             :publishing-directory "./public/res"
+             :publishing-function 'org-publish-attachment)))
 
 (setq org-html-validation-link nil)
 
 (defconst stylesheet "style1.css")
 (defconst main_js "main.js")
+(defconst xkcd_dependency_json "xkcd_dependency.json")
+(defconst xkcd_dependency_js "xkcd_dependency.js")
+
 ;; Custom appearance
 (setq org-html-validation-link nil            ;; Don't show validation link
       org-html-head-include-scripts t       ;; Use our own scripts
@@ -43,12 +52,12 @@
 ;; Generate the site output
 (org-publish-all t)
 
-
-
 ;; Copy local css and JS
 (message (format "Copying CSS ./docs/%s" stylesheet))
 (copy-file (format "./docs/%s"stylesheet) "./public/" t nil nil nil)
-(message (format "Copying JS ./docs/%s" main_js))
+(message (format "Copying JS & JSON ./docs/%s" main_js))
 (copy-file (format "./docs/%s"main_js) "./public/" t nil nil nil)
+(copy-file (format "./docs/%s"xkcd_dependency_json) "./public/" t nil nil nil)
+(copy-file (format "./docs/%s"xkcd_dependency_js) "./public/" t nil nil nil)
 
 (message "Build complete")

@@ -87,7 +87,7 @@ img {
 
 
 blockquote {
-	font-family: "Ubuntu"
+	font-family: "Ubuntu";
 	max-width: 40em;
 	line-height: 1.4;
 	position: relative;
@@ -193,4 +193,19 @@ blockquote:after {
 .scroll-controller div:hover {
 	background-color: #1c282c;
 	color: #eee;
+}
+
+/*
+ * An interactive block.
+ * Currently intended for the "supply chains" article.
+ */
+#interactive-block {
+	display: flex;
+	justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	text-align: center;
+	width: 100%;
+	height: auto;
 }

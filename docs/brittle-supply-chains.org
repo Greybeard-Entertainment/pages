@@ -1,0 +1,179 @@
+#+title: Brittle supply chains
+#+AUTHOR: Viktor Gridnevsky, Aleksandr Petrosyan and friends
+#+DATE: 16.02.2025
+#+LANGUAGE: en_GB
+#+OPTIONS: toc:nil  # Disable automatic TOC
+
+#+BEGIN_EXPORT html
+<div id="interactive-block"></div>
+<script src="xkcd_dependency.js"></script>
+#+END_EXPORT
+
+#+TOC: headlines 2
+
+There are many situations in which code updates are necessary, from operating system
+packages to changes in company infrastructure. Updates that break code
+can be expensive, costing not just money but also time and effort to fix.
+There's a domino effect in all that: when one dependency fails,
+it can take down many other dependencies with it, ending with specific programs.
+Our traditional strategies for preventing relevant failures are
+increasingly incompatible with today’s traditionally layered and interdependent designs.
+
+The “Literate programming” paradigm proposed by Donald Knuth in 1980s
+makes code easier to understand by interweaving code and documentation.
+Newer approaches following it focus on keeping things simple, clear, and efficient.
+Yet, even the cleanest code is not safe from the cascading failures
+when it depends on an unpredictable stack of third-party components
+that can change unpredictably and are created by strangers with varying priorities.
+My personal belief is that if a dependency cannot be relied upon
+to change in a predictable way, it should not be part of the foundation.
+
+More fundamental solutions with formal verification and mathematical proofs,
+as seen in projects like seL4 and Coq, already exist,
+but ensuring correctness doesn't match the typical development workflow we see nowadays.
+Balancing formal verification with evolving requirements, rapid prototyping,
+market responsiveness, and backward compatibility would create unrealistic amounts of work.
+At the same time, should we examine the current development situation through a proof by contradiction,
+we must question whether the current workflow and its underlying assumptions
+deserve the level of importance they are given or if they should instead be critically reassessed.
+This workflow did not emerge as an optimal, deliberate design but rather as a historical accident,
+shaped by shifting market pressures, time constraints, and the inertia of legacy practices.
+It is not inherently the most reliable or effective, nor does it minimize technical debt.
+In fact, it often exacerbates it.
+Furthermore, the notion of "best practices" within this system is fragmented at best.
+Many developers neither follow nor agree on a singular, cohesive set of principles,
+leading to inconsistent quality, inefficiencies, and further unpredictability.
+
+Another way to handle broken software is through compatibility layers[fn:1].
+Things I’ll put in that category include Java, other Just-In-Time (JIT) compilers,
+and Wine, which lets Windows programs run on other systems.
+Containers, be it Docker or Podman, with or without Kubernetes,
+provide yet another tool in that arsenal.
+Yet, if an underlying dependency breaks, the compatibility layer can fail just as easily,
+taking everything that depends on it with it.
+These layers don’t eliminate supply chain risks and usually are not built with that as a key goal in mind;
+they are just another link in the dependency chain, vulnerable to the same breakages they aim to mitigate.
+
+Despite decades of progress, our solutions are still scattered and limited.
+The more I code, the more I see how much we rely on high-level abstractions,
+which are often related to the peculiar kind I have mentioned in “product thinking”.
+
+I would expect a stable development ecosystem would be ensuring the developers
+know what changes, what remains, and how to adapt.
+I would expect a stable development ecosystem would require a structured method,
+clear metadata in the repository and changes in development software to
+track, version, and notify developers of dependency changes in an automated,
+predictable way.
+But it's not where we are.
+
+I don’t have all the answers, and I’m not claiming to, yet,
+I can start by asking the right questions.
+
+** The software entropy
+:PROPERTIES:
+:CUSTOM_ID: the-software-entropy
+:END:
+We rely on many software systems daily, expecting them to be stable.
+Testing is costly and only a few systems have reliable test coverage.
+Even fewer are rigorously tested with tools like theorem provers[fn:2].
+When we create new software, we often fail to document what mechanisms
+it relies on. In turn, that forces the users to guess these mechanisms
+using indirect evidence. This can be a lot of work, even when developers
+think it's obvious.
+
+Many systems are *called* "production-ready" even when their
+abstractions leak in "irrelevant places". The complexity of such
+software is hidden, the internal mechanisms are inaccessible, logic is
+obscured. Decision-making happens beneath the surface. That limits the
+amount of people able to improve their understanding of the software.
+People can't easily trace how the inputs of that software become
+outputs. Instead of true understanding, we, as users, are often forced
+to interact with black boxes, rely on heuristics, *trial-and-error
+debugging*, or external docs. I've been told this kind of unclarity is
+called *epistemic opacity*. Why is *epistemic opacity* a problem? Well,
+it stops us from forming accurate mental models of the behavior for
+systems we work with, independently verifying them and independently
+reasoning about them. Essentially, it stops us from understanding and
+using that understanding effectively, making us rely on authority
+figures[fn:3].
+
+Speaking of our understanding of the software, configuration is just as
+important. But how clearly can we configure a system when its logic is
+unclear? When settings aren't tied to well-understood mechanisms,
+configurations become unstable. This is *configuration fragility*.
+
+Without a clear mental model, small changes can cause big, unpredictable
+problems, which leads to *emergent failures*, which, in turn, are hard
+to diagnose and fix. The problem gets worse with *black-box dependency*,
+where the system's inner workings are hidden. Modern software supply
+chains are long. Users operate on incomplete assumptions. Configurations
+become *arbitrary incantations*, not meaningful mappings. The lack of
+transparency forces *trial-and-error debugging*. It reduces proactive
+problem-solving. It increases systemic brittleness. Configurations work
+under normal conditions but fail under stress. Instead of *predictable
+adaptability*, these systems create operational overhead. Maintenance
+gets harder. Iteration and optimization are blocked.
+
+*** Example: the banking software
+:PROPERTIES:
+:CUSTOM_ID: example-the-banking-software
+:END:
+Think about the systems we need to live, work, and be part of society.
+Banking technologies are a good example. They've become near-untouchable
+due to their role, but the aspect of things growing out of proportion
+due to the society's reliance on them is a different topic. Some say
+banks are a "convenience", not a necessity. Well, everyone has reasons
+to use these services. Try avoiding them when buying electronic parts
+from China to study electronics. I depend on the stability of banks,
+yet, they are opaque and unverifiable. For many reasons, the bank
+software is closed-source. Independent verification or auditing is
+impossible. All the while, the users have no practical alternative. We
+rely on systems we can't check for reliability, security, or logic. This
+lack of transparency reinforces the *epistemic opacity*. It creates
+dependency on unverified, inaccessible mechanisms that shape our daily
+lives. There's no easy solution, but it's a clear example of the
+problem.
+
+*** Learning, not burning
+:PROPERTIES:
+:CUSTOM_ID: learning-not-burning
+:END:
+Historically, my negative experiences that inspired this article come
+from dealing with many kinds of software. I picked banks to criticize,
+as due to their sheer size, it feels impersonal. While asking the
+opinions of the programmers to write this article, it feels like I am
+seen as an inquisitor making people uncomfortable. Sometimes, one side
+is unhappy with the code the other side writes. Sometimes, the
+unhappiness is mutual.
+
+Let me be clear: this article is about the philosophical and engineering
+aspects of software development. Please do not see it as a justification
+to point fingers or start a witch hunt. We all all humans and all of us
+sometimes make bad decisions, so let's avoid blaming each other on a
+personal level. Let's track the problems we face, analyse them and make
+our conclusions. Let's learn to build better software.
+
+*** The elusive source code
+:PROPERTIES:
+:CUSTOM_ID: the-elusive-source-code
+:END:
+Let me be clear on another point. Source code isn't always the key to
+understanding. It can change so much that it becomes useless. Imagine
+legal and medical jargon hidden in open-source software. Most people
+would struggle to find the real meaning. Even if they did, they'd have
+to explain it to others. If the jargon must stay, someone would need to
+translate it regularly. That's rarely realistic. Without this effort,
+the source code becomes useless. And that's just semantics. Syntax,
+patterns, and other details also affect readability, for better or
+worse. Source code alone doesn't solve *epistemic opacity*.
+
+*TO BE CONTINUED*
+
+[fn:1] The "compatibility layers" themselves naturally have dependencies.
+
+[fn:2] =TODO=: add network protocols verified with CoQ later
+
+[fn:3] It must be noted that often enough, "authority figures" won't
+       have time to reply or explain their decisions, leaving people who
+       could've done something useful with no means to improve their
+       understanding.
